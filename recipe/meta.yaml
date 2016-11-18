@@ -48,7 +48,6 @@ requirements:
         - hdfeos2
         - hdfeos5
         - jasper
-        - libgfortran
         - libpng >=1.6.23,<1.7
         - jpeg 9*
         - zlib 1.2.*
