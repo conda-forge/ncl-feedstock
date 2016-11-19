@@ -10,7 +10,7 @@ source:
     sha256: d2cd8a1de1c498c1832f0765113ad58086d1d3b29bf5d2cc9b1ba60f1919951c
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win]
     detect_binary_files_with_prefix: true
 
@@ -32,7 +32,7 @@ requirements:
         - libiconv
         - curl
         - cairo  # [linux]
-        - freetype  # [linux]
+        - freetype 2.6.*  # [linux]
         - udunits2
         - bzip2 1.0.*
         - gsl
@@ -48,7 +48,6 @@ requirements:
         - hdfeos2
         - hdfeos5
         - jasper
-        - libgfortran
         - libpng >=1.6.23,<1.7
         - jpeg 9*
         - zlib 1.2.*
@@ -57,7 +56,7 @@ requirements:
         - libiconv
         - curl
         - cairo  # [linux]
-        - freetype  # [linux]
+        - freetype 2.6.*  # [linux]
         - udunits2
         - bzip2 1.0.*
         - gsl
