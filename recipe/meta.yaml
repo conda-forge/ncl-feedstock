@@ -24,43 +24,42 @@ requirements:
         - hdfeos2
         - hdfeos5
         - jasper
-        - libpng >=1.6.23,<1.7
+        - libpng >=1.6.28,<1.7
         - jpeg 9*
         - zlib 1.2.*
         - hdf4
         - hdf5 1.8.17|1.8.17.*
         - libiconv
         - curl
-        - cairo  # [linux]
-        - freetype 2.6.*  # [linux]
+        - cairo 1.14.*  # [linux]
+        - freetype 2.7|2.7.*  # [linux]
         - udunits2
         - bzip2 1.0.*
         - gsl
         - pkg-config
-        - pixman
+        - pixman 0.34.*
     run:
         - libgcc
         - libnetcdf 4.4.*
-        - hdf4
         - proj4 4.9.3
         - gdal 2.1.*
         - g2clib 1.6.*
         - hdfeos2
         - hdfeos5
         - jasper
-        - libpng >=1.6.23,<1.7
+        - libpng >=1.6.28,<1.7
         - jpeg 9*
         - zlib 1.2.*
         - hdf4
         - hdf5 1.8.17|1.8.17.*
         - libiconv
         - curl
-        - cairo  # [linux]
-        - freetype 2.6.*  # [linux]
+        - cairo 1.14.*  # [linux]
+        - freetype 2.7|2.7.*  # [linux]
         - udunits2
         - bzip2 1.0.*
         - gsl
-        - pixman
+        - pixman 0.34.*
 
 test:
     commands:
