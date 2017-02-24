@@ -60,11 +60,14 @@ requirements:
         - bzip2 1.0.*
         - gsl
         - pixman 0.34.*
+        - esmf
 
 test:
+    source_files:
+        - install/make-tarfile/check_files
     commands:
-        - ncl -V
-        - NCARG_ROOT=${PREFIX} ${SRC_DIR}/install/make-tarfile/check_files | grep '^<' | grep -v '^< bin/ESMF_RegridWeightGen' && exit 1 || exit 0
+        - test "$(ncl -V)" = "{{ version }}"
+        - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
 
 about:
     home: http://ncl.ucar.edu/
