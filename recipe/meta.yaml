@@ -1,4 +1,4 @@
-{% set version = "6.3.0" %}
+{% set version = "6.4.0" %}
 
 package:
     name: ncl
@@ -7,10 +7,10 @@ package:
 source:
     fn: ncl-{{ version }}.tar.gz
     url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-    sha256: d2cd8a1de1c498c1832f0765113ad58086d1d3b29bf5d2cc9b1ba60f1919951c
+    sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-    number: 2
+    number: 0
     skip: True  # [win]
     detect_binary_files_with_prefix: true
 

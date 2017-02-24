@@ -22,9 +22,6 @@ fi
 
 mkdir triangle_tmp && cd triangle_tmp && curl -q http://www.netlib.org/voronoi/triangle.shar | sh && mv triangle.? ../ni/src/lib/hlu/. && cd -
 
-# add "-std=c99" to compile config files -- not needed after NCL 6.3.0
-sed -e "s/^\(#define CcOptions.*\)$/\1 -std=c99/" -i.backup "${conf_file}"
-
 # fix path to cpp in ymake -- we should fix this in NCL
 sed -e "s|^\(  set cpp = \)/lib/cpp$|\1${PREFIX}/bin/cpp|g" -i.backup config/ymake
 
