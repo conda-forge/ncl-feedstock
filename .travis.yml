@@ -13,6 +13,8 @@ env:
 
 
 before_install:
+    # Proof-of-concept XQuartz installation
+    - brew cask install xquartz
     # Remove homebrew.
     - |
       echo ""
