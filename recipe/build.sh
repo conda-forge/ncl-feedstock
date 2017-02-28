@@ -15,6 +15,7 @@ if [ "$(uname)" = "Darwin" ]; then
         exit
     fi
 
+    LDFLAGS="-headerpad_max_install_names $LDFLAGS"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
     conf_file=config/LINUX
