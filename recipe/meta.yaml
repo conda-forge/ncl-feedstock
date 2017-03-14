@@ -1,81 +1,82 @@
 {% set version = "6.4.0" %}
 
 package:
-    name: ncl
-    version: {{ version }}
+  name: ncl
+  version: {{ version }}
 
 source:
-    fn: ncl-{{ version }}.tar.gz
-    url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-    sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
+  fn: ncl-{{ version }}.tar.gz
+  url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
+  sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-    number: 0
-    skip: True  # [win]
-    detect_binary_files_with_prefix: true
+  number: 0
+  skip: True  # [win]
+  detect_binary_files_with_prefix: true
 
 requirements:
-    build:
-        - gcc
-        - libnetcdf 4.4.*
-        - proj4 4.9.3
-        - gdal 2.1.*
-        - g2clib 1.6.*
-        - hdfeos2
-        - hdfeos5
-        - jasper
-        - libpng >=1.6.28,<1.7
-        - jpeg 9*
-        - zlib 1.2.*
-        - hdf4
-        - hdf5 1.8.17|1.8.17.*
-        - libiconv
-        - curl
-        - cairo 1.14.*  # [linux]
-        - freetype 2.7|2.7.*  # [linux]
-        - udunits2
-        - bzip2 1.0.*
-        - gsl
-        - pkg-config
-        - pixman 0.34.*
-    run:
-        - libgcc
-        - libnetcdf 4.4.*
-        - proj4 4.9.3
-        - gdal 2.1.*
-        - g2clib 1.6.*
-        - hdfeos2
-        - hdfeos5
-        - jasper
-        - libpng >=1.6.28,<1.7
-        - jpeg 9*
-        - zlib 1.2.*
-        - hdf4
-        - hdf5 1.8.17|1.8.17.*
-        - libiconv
-        - curl
-        - cairo 1.14.*  # [linux]
-        - freetype 2.7|2.7.*  # [linux]
-        - udunits2
-        - bzip2 1.0.*
-        - gsl
-        - pixman 0.34.*
-        - esmf
+  build:
+    - gcc
+    - libnetcdf 4.4.*
+    - proj4 4.9.3
+    - gdal 2.1.*
+    - g2clib 1.6.*
+    - hdfeos2
+    - hdfeos5
+    - jasper
+    - libpng >=1.6.28,<1.7
+    - jpeg 9*
+    - zlib 1.2.*
+    - hdf4
+    - hdf5 1.8.17|1.8.17.*
+    - libiconv
+    - curl
+    - cairo 1.14.*  # [linux]
+    - freetype 2.7|2.7.*  # [linux]
+    - udunits2
+    - bzip2 1.0.*
+    - gsl
+    - pkg-config
+    - pixman 0.34.*
+  run:
+    - libgcc
+    - libnetcdf 4.4.*
+    - proj4 4.9.3
+    - gdal 2.1.*
+    - g2clib 1.6.*
+    - hdfeos2
+    - hdfeos5
+    - jasper
+    - libpng >=1.6.28,<1.7
+    - jpeg 9*
+    - zlib 1.2.*
+    - hdf4
+    - hdf5 1.8.17|1.8.17.*
+    - libiconv
+    - curl
+    - cairo 1.14.*  # [linux]
+    - freetype 2.7|2.7.*  # [linux]
+    - udunits2
+    - bzip2 1.0.*
+    - gsl
+    - pixman 0.34.*
+    - esmf
 
 test:
-    source_files:
-        - install/make-tarfile/check_files
-    commands:
-        - test "$(ncl -V)" = "{{ version }}"
-        - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
+  source_files:
+    - install/make-tarfile/check_files
+  commands:
+    - test "$(ncl -V)" = "{{ version }}"
+    - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
 
 about:
-    home: http://ncl.ucar.edu/
-    license: 'NCL Source Code'
-    summary: 'NCAR Command Language'
+  home: http://ncl.ucar.edu/
+  license: 'NCL Source Code'
+  summary: 'NCAR Command Language'
 
 extra:
-    recipe-maintainers:
-        - khallock
-        - marylhaley
-        - david-ian-brown
+  recipe-maintainers:
+    - khallock
+    - marylhaley
+    - david-ian-brown
+    - ocefpaf
