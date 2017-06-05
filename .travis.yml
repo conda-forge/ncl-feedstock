@@ -13,8 +13,6 @@ env:
 
 
 before_install:
-    # Proof-of-concept XQuartz installation
-    - brew cask install xquartz
     # Fast finish the PR.
     - |
       (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
