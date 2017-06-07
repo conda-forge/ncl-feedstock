@@ -10,7 +10,7 @@ source:
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -28,7 +28,7 @@ requirements:
     - jpeg 9*
     - zlib 1.2.*
     - hdf4
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - libiconv
     - curl
     - cairo 1.14.*  # [linux]
@@ -51,7 +51,7 @@ requirements:
     - jpeg 9*
     - zlib 1.2.*
     - hdf4
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - libiconv
     - curl
     - cairo 1.14.*  # [linux]
