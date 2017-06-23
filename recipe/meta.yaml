@@ -61,6 +61,10 @@ requirements:
     - gsl
     - pixman 0.34.*
     - esmf
+    # This will ensure that ncl works regardles of the gsl downloaded
+    # (with or without openblas) at build time.
+    # We can remove this once we have a better solution.
+    - openblas
 
 test:
   source_files:
