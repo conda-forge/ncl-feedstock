@@ -10,7 +10,7 @@ source:
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -19,7 +19,7 @@ requirements:
     - gcc
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - gdal 2.2.*
+    - libgdal 2.2.*
     - g2clib 1.6.*
     - hdfeos2
     - hdfeos5
@@ -42,7 +42,7 @@ requirements:
     - libgcc
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - gdal 2.2.*
+    - libgdal 2.2.*
     - g2clib 1.6.*
     - hdfeos2
     - hdfeos5
@@ -68,6 +68,8 @@ test:
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
+    - conda inspect linkages -p $PREFIX ncl  # [not win]
+    - conda inspect objects -p $PREFIX ncl  # [osx]
 
 about:
   home: http://ncl.ucar.edu/
