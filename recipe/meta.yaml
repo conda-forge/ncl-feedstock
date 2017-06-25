@@ -64,7 +64,7 @@ requirements:
     # This will ensure that ncl works regardles of the gsl downloaded
     # (with or without openblas) at build time.
     # We can remove this once we have a better solution.
-    - openblas 0.2.*
+    - openblas 0.2.19|0.2.19.*
 
 test:
   source_files:
