@@ -26,18 +26,24 @@ requirements:
     - jasper
     - libpng >=1.6.28,<1.7
     - jpeg 9*
-    - zlib 1.2.*
+    - zlib 1.2.8
     - hdf4
     - hdf5 1.8.18|1.8.18.*
     - libiconv
     - curl
     - cairo 1.14.*  # [linux]
-    - freetype 2.7|2.7.*  # [linux]
+    - freetype 2.7  # [linux]
     - udunits2
     - bzip2 1.0.*
     - gsl
     - pkg-config
     - pixman 0.34.*
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
+    - xorg-imake  # [linux]
+    - flex  # [linux]
   run:
     - libgcc
     - libnetcdf 4.4.*
@@ -49,18 +55,23 @@ requirements:
     - jasper
     - libpng >=1.6.28,<1.7
     - jpeg 9*
-    - zlib 1.2.*
+    - zlib 1.2.8
     - hdf4
     - hdf5 1.8.18|1.8.18.*
     - libiconv
     - curl
     - cairo 1.14.*  # [linux]
-    - freetype 2.7|2.7.*  # [linux]
+    - freetype 2.7  # [linux]
     - udunits2
     - bzip2 1.0.*
     - gsl
     - pixman 0.34.*
     - esmf
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
+    - xorg-imake  # [linux]
     # This will ensure that ncl works regardles of the gsl downloaded
     # (with or without openblas) at build time.
     # We can remove this once we have a better solution.
@@ -78,6 +89,7 @@ test:
 about:
   home: http://ncl.ucar.edu/
   license: 'NCL Source Code'
+  license_file: COPYING
   summary: 'NCAR Command Language'
 
 extra:
