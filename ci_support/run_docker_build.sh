@@ -62,7 +62,7 @@ source run_conda_forge_build_setup
 # "recipe/yum_requirements.txt" file. After updating that file,
 # run "conda smithy rerender" and this line be updated
 # automatically.
-/usr/bin/sudo -n yum install -y csh imake libX11-devel libXaw-devel libXmu-devel byacc flex flex-devel
+/usr/bin/sudo -n yum install -y csh
 
 
 # Embarking on 1 case(s).

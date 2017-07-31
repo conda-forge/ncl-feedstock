@@ -22,10 +22,10 @@ requirements:
     - gcc
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2 1.0.*
-    - cairo 1.14.*  # [linux]
+    - cairo 1.14.*
     - curl
-    - flex  # [linux]
-    - freetype 2.7  # [linux]
+    - flex
+    - freetype 2.7
     - g2clib 1.6.*
     - gsl
     - hdf4
@@ -42,21 +42,21 @@ requirements:
     - pkg-config
     - proj4 4.9.3
     - udunits2
-    - xorg-imake  # [linux]
-    - xorg-libx11  # [linux]
-    - xorg-libxaw  # [linux]
-    - xorg-libxmu  # [linux]
-    - xorg-libxrender  # [linux]
-    - xorg-makedepend  # [linux]
+    - xorg-imake
+    - xorg-libx11
+    - xorg-libxaw
+    - xorg-libxmu
+    - xorg-libxrender
+    - xorg-makedepend
     - zlib 1.2.8
   run:
     - libgcc
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2 1.0.*
-    - cairo 1.14.*  # [linux]
+    - cairo 1.14.*
     - curl
     - esmf
-    - freetype 2.7  # [linux]
+    - freetype 2.7
     - g2clib 1.6.*
     - gsl
     - hdf4
@@ -72,12 +72,12 @@ requirements:
     - pixman 0.34.*
     - proj4 4.9.3
     - udunits2
-    - xorg-imake  # [linux]
-    - xorg-libx11  # [linux]
-    - xorg-libxaw  # [linux]
-    - xorg-libxmu  # [linux]
-    - xorg-libxrender  # [linux]
-    - xorg-makedepend  # [linux]
+    - xorg-imake
+    - xorg-libx11
+    - xorg-libxaw
+    - xorg-libxmu
+    - xorg-libxrender
+    - xorg-makedepend
     - zlib 1.2.8
 
 test:
