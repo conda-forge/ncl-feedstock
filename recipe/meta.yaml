@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: ncl-{{ version }}.tar.gz
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
@@ -22,7 +21,7 @@ requirements:
     - gcc
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2 1.0.*
-    - cairo 1.14.*
+    - cairo 1.14.*  # [linux]
     - curl
     - flex
     - freetype 2.7
@@ -53,7 +52,7 @@ requirements:
     - libgcc
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2 1.0.*
-    - cairo 1.14.*
+    - cairo 1.14.*  # [linux]
     - curl
     - esmf
     - freetype 2.7
