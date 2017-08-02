@@ -24,7 +24,7 @@ requirements:
     - cairo 1.14.*  # [linux]
     - curl
     - flex
-    - freetype 2.7
+    - freetype 2.7  # [linux]
     - g2clib 1.6.*
     - gsl
     - hdf4
@@ -41,12 +41,12 @@ requirements:
     - pkg-config
     - proj4 4.9.3
     - udunits2
-    - xorg-imake
-    - xorg-libx11
-    - xorg-libxaw
-    - xorg-libxmu
-    - xorg-libxrender
-    - xorg-makedepend
+    - xorg-imake  # [linux]
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
+    - xorg-makedepend  # [linux]
     - zlib 1.2.8
   run:
     - libgcc
@@ -55,7 +55,7 @@ requirements:
     - cairo 1.14.*  # [linux]
     - curl
     - esmf
-    - freetype 2.7
+    - freetype 2.7  # [linux]
     - g2clib 1.6.*
     - gsl
     - hdf4
@@ -71,12 +71,12 @@ requirements:
     - pixman 0.34.*
     - proj4 4.9.3
     - udunits2
-    - xorg-imake
-    - xorg-libx11
-    - xorg-libxaw
-    - xorg-libxmu
-    - xorg-libxrender
-    - xorg-makedepend
+    - xorg-imake  # [linux]
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
+    - xorg-makedepend  # [linux]
     - zlib 1.2.8
 
 test:
