@@ -41,7 +41,7 @@ requirements:
     - bzip2 1.0.*
     - gsl
     - pkg-config
-    - pixman 0.34.*
+    - pixman 0.34.*  # [linux]
   run:
     - libgcc
     - blas 1.1 {{ variant }}  # [not win]
@@ -64,7 +64,7 @@ requirements:
     - udunits2
     - bzip2 1.0.*
     - gsl
-    - pixman 0.34.*
+    - pixman 0.34.*  # [linux]
     - esmf
 
 test:
