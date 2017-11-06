@@ -6,12 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: ncl-{{ version }}.tar.gz
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-  number: 5
+  number: 6
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -19,53 +18,62 @@ build:
 
 requirements:
   build:
+    - blas 1.1 {{ variant }}  # [not win]
+    - bzip2 1.0.*
+    - cairo 1.14.*  # [linux]
+    - curl >=7.54.1,<8
+    - freetype 2.7  # [linux]
+    - g2clib 1.6.*
+    - gsl  2.2.*
+    - hdf4
+    # FIXME: We cannot use hdf5 1.10.1 b/c of hdfeos5 is failing with that version.
+    - hdf5 1.8.18|1.8.18.*
+    - hdfeos2
+    - hdfeos5
+    - jasper
+    - jpeg 9*
+    - libgdal 2.1.*
+    - libiconv
+    - libnetcdf 4.4.*
+    - libpng >=1.6.22,<1.6.31
+    - pixman 0.34.*  # [linux]
+    - proj4 4.9.3
+    - udunits2
+    - zlib 1.2.11
+    - flex
     - gcc
-    - blas 1.1 {{ variant }}  # [not win]
-    - libnetcdf 4.4.*
-    - proj4 4.9.3
-    - libgdal 2.2.*
-    - g2clib 1.6.*
-    - hdfeos2
-    - hdfeos5
-    - jasper
-    - libpng >=1.6.28,<1.7
-    - jpeg 9*
-    - zlib 1.2.8
-    - hdf4
-    - hdf5 1.8.18|1.8.18.*
-    - libiconv
-    - curl
-    - cairo 1.14.*  # [linux]
-    - freetype 2.7  # [linux]
-    - udunits2
-    - bzip2 1.0.*
-    - gsl
     - pkg-config
-    - pixman 0.34.*  # [linux]
   run:
-    - libgcc
     - blas 1.1 {{ variant }}  # [not win]
-    - libnetcdf 4.4.*
-    - proj4 4.9.3
-    - libgdal 2.2.*
+    - bzip2 1.0.*
+    - cairo 1.14.*  # [linux]
+    - curl >=7.54.1,<8
+    - freetype 2.7  # [linux]
     - g2clib 1.6.*
+    - gsl  2.2.*
+    - hdf4
+    # FIXME: We cannot use hdf5 1.10.1 b/c of hdfeos5 is failing with that version.
+    - hdf5 1.8.18|1.8.18.*
     - hdfeos2
     - hdfeos5
     - jasper
-    - libpng >=1.6.28,<1.7
     - jpeg 9*
-    - zlib 1.2.8
-    - hdf4
-    - hdf5 1.8.18|1.8.18.*
+    - libgdal 2.1.*
     - libiconv
-    - curl
-    - cairo 1.14.*  # [linux]
-    - freetype 2.7  # [linux]
-    - udunits2
-    - bzip2 1.0.*
-    - gsl
+    - libnetcdf 4.4.*
+    - libpng >=1.6.22,<1.6.31
     - pixman 0.34.*  # [linux]
+    - proj4 4.9.3
+    - udunits2
+    - zlib 1.2.11
     - esmf
+    - libgcc
+    - xorg-imake  # [linux]
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
+    - xorg-makedepend  # [linux]
 
 test:
   source_files:
@@ -73,12 +81,13 @@ test:
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
-    - conda inspect linkages -p $PREFIX ncl  # [not win]
-    - conda inspect objects -p $PREFIX ncl  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://ncl.ucar.edu/
   license: 'NCL Source Code'
+  license_file: COPYING
   summary: 'NCAR Command Language'
 
 extra:
