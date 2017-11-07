@@ -11,7 +11,7 @@ source:
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-  number: 5
+  number: 6
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -23,23 +23,23 @@ requirements:
     - blas 1.1 {{ variant }}  # [not win]
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - libgdal 2.2.*
+    - libgdal 2.1.*
     - g2clib 1.6.*
     - hdfeos2
     - hdfeos5
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - jpeg 9*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - hdf4
     - hdf5 1.8.18|1.8.18.*
     - libiconv
-    - curl
+    - curl >=7.44.0,<8
     - cairo 1.14.*  # [linux]
     - freetype 2.7  # [linux]
     - udunits2
     - bzip2 1.0.*
-    - gsl
+    - gsl 2.2.*
     - pkg-config
     - pixman 0.34.*  # [linux]
   run:
@@ -47,23 +47,23 @@ requirements:
     - blas 1.1 {{ variant }}  # [not win]
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - libgdal 2.2.*
+    - libgdal 2.1.*
     - g2clib 1.6.*
     - hdfeos2
     - hdfeos5
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - jpeg 9*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - hdf4
     - hdf5 1.8.18|1.8.18.*
     - libiconv
-    - curl
+    - curl >=7.44.0,<8
     - cairo 1.14.*  # [linux]
     - freetype 2.7  # [linux]
     - udunits2
     - bzip2 1.0.*
-    - gsl
+    - gsl 2.2.*
     - pixman 0.34.*  # [linux]
     - esmf
 
