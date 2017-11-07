@@ -39,7 +39,7 @@ requirements:
     - freetype 2.7  # [linux]
     - udunits2
     - bzip2 1.0.*
-    - gsl
+    - gsl 2.2.*
     - pkg-config
     - pixman 0.34.*  # [linux]
   run:
@@ -63,7 +63,7 @@ requirements:
     - freetype 2.7  # [linux]
     - udunits2
     - bzip2 1.0.*
-    - gsl
+    - gsl 2.2.*
     - pixman 0.34.*  # [linux]
     - esmf
 
