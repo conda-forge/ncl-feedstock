@@ -28,13 +28,13 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - jpeg 9*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - hdf4
     - hdf5 1.8.18|1.8.18.*
     - libiconv
-    - curl
+    - curl >=7.44.0,<8
     - cairo 1.14.*  # [linux]
     - freetype 2.7  # [linux]
     - udunits2
@@ -52,13 +52,13 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - jpeg 9*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - hdf4
     - hdf5 1.8.18|1.8.18.*
     - libiconv
-    - curl
+    - curl >=7.44.0,<8
     - cairo 1.14.*  # [linux]
     - freetype 2.7  # [linux]
     - udunits2
