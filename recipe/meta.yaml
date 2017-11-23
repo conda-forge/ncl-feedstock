@@ -10,7 +10,7 @@ source:
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
 
 build:
-  number: 6
+  number: 7
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -33,7 +33,7 @@ requirements:
     - jasper
     - jpeg 9*
     - libgdal 2.1.*
-    - libiconv
+    - libiconv 1.15
     - libnetcdf 4.4.*
     - libpng >=1.6.22,<1.6.31
     - pixman 0.34.*  # [linux]
@@ -59,7 +59,7 @@ requirements:
     - jasper
     - jpeg 9*
     - libgdal 2.1.*
-    - libiconv
+    - libiconv 1.15
     - libnetcdf 4.4.*
     - libpng >=1.6.22,<1.6.31
     - pixman 0.34.*  # [linux]
