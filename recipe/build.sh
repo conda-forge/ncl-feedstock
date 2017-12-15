@@ -1,5 +1,8 @@
 #!/bin/sh
 
+set -e
+
+
 export CC=${PREFIX}/bin/gcc
 export CXXFLAGS="-fPIC $CXXFLAGS"
 export LDFLAGS="-L${PREFIX}/lib $LDFLAGS"

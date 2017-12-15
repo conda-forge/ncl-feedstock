@@ -3,3 +3,6 @@ libX11-devel
 libXaw-devel
 libXmu-devel
 byacc
+makedepend
+flex
+flex-devel

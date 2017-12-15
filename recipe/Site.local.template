@@ -17,4 +17,7 @@
 ${CAIROLIB}
 ${CAIROLIBUSER}
 
+#define BuildHDFEOS5 0
+#define HDFEOS5lib
+
 #endif /* SecondSite */
