@@ -8,9 +8,12 @@ package:
 source:
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
   sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
+  patches:
+    - hdf5_1.10.patch
+
 
 build:
-  number: 6
+  number: 7
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -21,21 +24,20 @@ requirements:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2 1.0.*
     - cairo 1.14.*  # [linux]
-    - curl >=7.54.1,<8
-    - freetype 2.7  # [linux]
+    - curl >=7.44.0,<8
+    - freetype 2.8.1  # [linux]
     - g2clib 1.6.*
     - gsl  2.2.*
     - hdf4
-    # FIXME: We cannot use hdf5 1.10.1 b/c of hdfeos5 is failing with that version.
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - hdfeos2
     - hdfeos5
     - jasper
     - jpeg 9*
-    - libgdal 2.1.*
-    - libiconv
+    - libgdal 2.2.*
+    - libiconv 1.15
     - libnetcdf 4.4.*
-    - libpng >=1.6.22,<1.6.31
+    - libpng >=1.6.32,<1.6.35
     - pixman 0.34.*  # [linux]
     - proj4 4.9.3
     - udunits2
@@ -47,21 +49,20 @@ requirements:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2 1.0.*
     - cairo 1.14.*  # [linux]
-    - curl >=7.54.1,<8
-    - freetype 2.7  # [linux]
+    - curl >=7.44.0,<8
+    - freetype 2.8.1  # [linux]
     - g2clib 1.6.*
     - gsl  2.2.*
     - hdf4
-    # FIXME: We cannot use hdf5 1.10.1 b/c of hdfeos5 is failing with that version.
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
     - hdfeos2
     - hdfeos5
     - jasper
     - jpeg 9*
-    - libgdal 2.1.*
-    - libiconv
+    - libgdal 2.2.*
+    - libiconv 1.15
     - libnetcdf 4.4.*
-    - libpng >=1.6.22,<1.6.31
+    - libpng >=1.6.32,<1.6.35
     - pixman 0.34.*  # [linux]
     - proj4 4.9.3
     - udunits2
