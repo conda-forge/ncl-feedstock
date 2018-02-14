@@ -7,12 +7,13 @@
 #define YmakeRoot ${PREFIX}
 
 #define LibSearch ${x11_lib} -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
-#define IncSearch ${x11_inc} -I${PREFIX}/include -I${PREFIX}/include/freetype2
+#define IncSearch ${x11_inc} -I${grib2_dir} -I${PREFIX}/include -I${PREFIX}/include/freetype2
 
 #define BuildGDAL 1
 
 #define HDF5lib -lhdf5_hl -lhdf5 -lz
 #define NetCDF4lib  -lhdf5_hl -lhdf5
+#define GRIB2lib ${grib2_dir}/libgrib2c.a -ljasper -lpng -lz -ljpeg
 
 ${CAIROLIB}
 ${CAIROLIBUSER}
