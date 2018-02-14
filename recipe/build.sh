@@ -26,6 +26,9 @@ fi
 
 export EXTRA_LDFLAGS="$LDFLAGS"
 
+export grib2_dir=${SRC_DIR}/external/g2clib-1.6.0
+export EXTRA_INCLUDES=-I${grib2_dir}
+
 mkdir triangle_tmp && cd triangle_tmp && curl -q http://www.netlib.org/voronoi/triangle.shar | sh && mv triangle.? ../ni/src/lib/hlu/. && cd -
 
 # fix path to cpp in ymake -- we should fix this in NCL
@@ -34,7 +37,7 @@ sed -e "s|^\(  set cpp = \)/lib/cpp$|\1${PREFIX}/bin/cpp|g" -i.backup config/yma
 # fix path to cpp in $conf_file
 sed -e "s|/usr/bin/cpp|${PREFIX}/bin/cpp|g" -i.backup ${conf_file}
 
-sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_lib}|${x11_lib}|g" -e "s|\${CAIROLIB}|${CAIROLIB}|g" -e "s|\${CAIROLIBUSER}|${CAIROLIBUSER}|g" "${RECIPE_DIR}/Site.local.template" > config/Site.local
+sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_lib}|${x11_lib}|g" -e "s|\${CAIROLIB}|${CAIROLIB}|g" -e "s|\${CAIROLIBUSER}|${CAIROLIBUSER}|g" -e "s|\${grib2_dir}|${grib2_dir}|g" "${RECIPE_DIR}/Site.local.template" > config/Site.local
 
 echo -e "n\n" | ./Configure
 make Everything
