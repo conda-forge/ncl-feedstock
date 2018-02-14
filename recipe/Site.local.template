@@ -14,6 +14,8 @@
 #define HDF5lib -lhdf5_hl -lhdf5 -lz
 #define NetCDF4lib  -lhdf5_hl -lhdf5
 #define GRIB2lib ${grib2_dir}/libgrib2c.a -ljasper -lpng -lz -ljpeg
+/* libgdal contains its own libgrib2c, so the proper libgrib2c should always be linked before libgdal. */
+#define GDALlib  ${grib2_dir}/libgrib2c.a -lgdal -lproj -ljpeg
 
 ${CAIROLIB}
 ${CAIROLIBUSER}
