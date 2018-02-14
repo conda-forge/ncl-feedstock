@@ -14,7 +14,7 @@ source:
 
 
 build:
-  number: 8
+  number: 9
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
