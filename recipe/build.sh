@@ -1,4 +1,6 @@
 #!/bin/sh
+NCL_VERSION="${PKG_VERSION}+${GIT_FULL_HASH:0:7}"
+sed -e "s/^\(\#define.*Version\).*/\1 ${NCL_VERSION}/g" -i.backup config/Project
 
 export CC=${PREFIX}/bin/gcc
 export CXXFLAGS="-fPIC $CXXFLAGS"
