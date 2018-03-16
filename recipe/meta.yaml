@@ -1,20 +1,21 @@
-{% set version = "6.4.0" %}
+{% set version = "6.5.0.dev0" %}
 {% set variant = "openblas" %}
+{% set commit_id = "10439e226f125ae5411a65c6d944d3f2c9d6f070" %}
+
 
 package:
   name: ncl
   version: {{ version }}
 
 source:
-  url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-  sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
+  git_url: https://github.com/NCAR/ncl.git
+  git_rev: {{ commit_id }}
   patches:
-    - hdf5_1.10.patch
     - grib2.patch
 
 
 build:
-  number: 9
+  number: 0
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -79,7 +80,7 @@ test:
   source_files:
     - install/make-tarfile/check_files
   commands:
-    - test "$(ncl -V)" = "{{ version }}"
+    - test "$(ncl -V)" = "{{ version }}+{{ GIT_FULL_HASH[0:7] }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
