@@ -1,6 +1,6 @@
-{% set version = "6.5.0.dev0" %}
+{% set version = "6.5.0.dev1" %}
 {% set variant = "openblas" %}
-{% set commit_id = "10439e226f125ae5411a65c6d944d3f2c9d6f070" %}
+{% set commit_id = "575ee17a5a51d54ee650258aa8259cacd8968bf6" %}
 
 
 package:
@@ -15,7 +15,7 @@ source:
 
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
