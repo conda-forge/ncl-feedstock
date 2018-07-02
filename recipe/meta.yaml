@@ -13,7 +13,7 @@ source:
     - grib2.patch
 
 build:
-  number: 10
+  number: 11
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -21,52 +21,53 @@ build:
 
 requirements:
   build:
+    - pkg-config
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+  host:
     - blas 1.1 {{ variant }}  # [not win]
-    - bzip2 1.0.*
-    - cairo 1.14.*  # [linux]
-    - curl >=7.44.0,<8
-    - freetype 2.8.1  # [linux]
-    - gsl 2.2.*
+    - bzip2
+    - cairo         # [linux]
+    - curl
+    - freetype        # [linux]
+    - gsl
     - hdf4
-    - hdf5 1.10.1
+    - hdf5
     - hdfeos2
     - hdfeos5
     - jasper
-    - jpeg 9*
-    - libgdal 2.2.*
-    - libiconv 1.15
-    - libnetcdf 4.5.*
-    - libpng >=1.6.32,<1.6.35
-    - pixman 0.34.*  # [linux]
-    - proj4 4.9.3
+    - jpeg
+    - libgdal
+    - libiconv
+    - libnetcdf
+    - libpng
+    - pixman         # [linux]
+    - proj4
     - udunits2
-    - zlib 1.2.11
+    - zlib
     - flex
-    - gcc
-    - pkg-config
   run:
     - blas 1.1 {{ variant }}  # [not win]
-    - bzip2 1.0.*
-    - cairo 1.14.*  # [linux]
-    - curl >=7.44.0,<8
-    - freetype 2.8.1  # [linux]
-    - gsl 2.2.*
+    - bzip2
+    - cairo         # [linux]
+    - curl
+    - freetype        # [linux]
+    - gsl
     - hdf4
-    - hdf5 1.10.1
+    - hdf5
     - hdfeos2
     - hdfeos5
     - jasper
-    - jpeg 9*
-    - libgdal 2.2.*
-    - libiconv 1.15
-    - libnetcdf >=4.5
-    - libpng >=1.6.32,<1.6.35
-    - pixman 0.34.*  # [linux]
-    - proj4 4.9.3
+    - jpeg
+    - libgdal
+    - libiconv
+    - libnetcdf
+    - libpng
+    - pixman         # [linux]
+    - proj4
     - udunits2
-    - zlib 1.2.11
+    - zlib
     - esmf
-    - libgcc
     - xorg-imake  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxaw  # [linux]
