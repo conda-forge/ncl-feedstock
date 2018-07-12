@@ -14,8 +14,7 @@ Summary: NCAR Command Language
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ncl-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ncl-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/ncl-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ncl-feedstock)
+[![Linux,OSX](https://img.shields.io/circleci/project/github/conda-forge/ncl-feedstock/master.svg?label=Linux,OSX)](https://circleci.com/gh/conda-forge/ncl-feedstock)
 ![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
