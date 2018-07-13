@@ -28,9 +28,9 @@ requirements:
   host:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
-    - cairo         # [linux]
+    - cairo  # [linux]
     - curl
-    - freetype        # [linux]
+    - freetype  # [linux]
     - gsl
     - hdf4
     - hdf5
@@ -42,7 +42,7 @@ requirements:
     - libiconv
     - libnetcdf
     - libpng
-    - pixman         # [linux]
+    - pixman  # [linux]
     - proj4
     - udunits2
     - zlib
@@ -50,9 +50,9 @@ requirements:
   run:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
-    - cairo         # [linux]
+    - cairo  # [linux]
     - curl
-    - freetype        # [linux]
+    - freetype  # [linux]
     - gsl
     - hdf4
     - hdf5
@@ -60,11 +60,12 @@ requirements:
     - hdfeos5
     - jasper
     - jpeg
+    - libgcc  # [osx]
     - libgdal
     - libiconv
     - libnetcdf
     - libpng
-    - pixman         # [linux]
+    - pixman  # [linux]
     - proj4
     - udunits2
     - zlib
