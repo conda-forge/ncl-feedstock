@@ -1,4 +1,4 @@
-{% set version = "6.4.0" %}
+{% set version = "6.5.0" %}
 {% set variant = "openblas" %}
 
 package:
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-  sha256: 0962ae1a1d716b182b3b27069b4afe66bf436c64c312ddfcf5f34d4ec60153c8
+  sha256: 133446f3302eddf237db56bf349e1ebf228240a7320699acc339a3d7ee414591
   patches:
     - hdf5_1.10.patch
     - grib2.patch
 
 build:
   merge_build_host: True  # [osx]
-  number: 11
+  number: 0
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
