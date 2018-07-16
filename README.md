@@ -14,14 +14,15 @@ Summary: NCAR Command Language
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ncl-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ncl-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ncl-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ncl-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux,OSX](https://img.shields.io/circleci/project/github/conda-forge/ncl-feedstock/master.svg?label=Linux,OSX)](https://circleci.com/gh/conda-forge/ncl-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ncl/badges/version.svg)](https://anaconda.org/conda-forge/ncl)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ncl/badges/downloads.svg)](https://anaconda.org/conda-forge/ncl)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ncl-green.svg)](https://anaconda.org/conda-forge/ncl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ncl.svg)](https://anaconda.org/conda-forge/ncl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ncl.svg)](https://anaconda.org/conda-forge/ncl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ncl.svg)](https://anaconda.org/conda-forge/ncl) |
 
 Installing ncl
 ==============
