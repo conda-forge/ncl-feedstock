@@ -9,13 +9,15 @@ curl:
 fortran_compiler:
 - toolchain_fort
 freetype:
-- 2.8.1
+- 2.9.1
 gsl:
 - '2.2'
 hdf4:
 - '4.2'
 hdf5:
 - 1.10.2
+jasper:
+- 1.900.1
 jpeg:
 - '9'
 libgdal:
@@ -34,13 +36,15 @@ pin_run_as_build:
   curl:
     max_pin: x
   freetype:
-    max_pin: x.x
+    max_pin: x
   gsl:
     max_pin: x.x
   hdf4:
     max_pin: x.x
   hdf5:
     max_pin: x.x.x
+  jasper:
+    max_pin: x
   jpeg:
     max_pin: x
   libgdal:

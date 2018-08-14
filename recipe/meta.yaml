@@ -13,7 +13,7 @@ source:
 
 build:
   merge_build_host: True  # [osx]
-  number: 0
+  number: 1
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -59,7 +59,6 @@ requirements:
     - hdfeos5
     - jasper
     - jpeg
-    - libgcc  # [osx]
     - libgdal
     - libiconv
     - libnetcdf

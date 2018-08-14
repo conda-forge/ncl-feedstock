@@ -4,20 +4,18 @@ bzip2:
 - '1'
 c_compiler:
 - toolchain_c
-cairo:
-- '1.14'
 curl:
 - '7.59'
 fortran_compiler:
 - toolchain_fort
-freetype:
-- 2.8.1
 gsl:
 - '2.2'
 hdf4:
 - '4.2'
 hdf5:
 - 1.10.2
+jasper:
+- 1.900.1
 jpeg:
 - '9'
 libgdal:
@@ -35,18 +33,16 @@ macos_min_version:
 pin_run_as_build:
   bzip2:
     max_pin: x
-  cairo:
-    max_pin: x.x
   curl:
     max_pin: x
-  freetype:
-    max_pin: x.x
   gsl:
     max_pin: x.x
   hdf4:
     max_pin: x.x
   hdf5:
     max_pin: x.x.x
+  jasper:
+    max_pin: x
   jpeg:
     max_pin: x
   libgdal:
@@ -57,14 +53,10 @@ pin_run_as_build:
     max_pin: x.x
   libpng:
     max_pin: x.x
-  pixman:
-    max_pin: x.x
   proj4:
     max_pin: x.x.x
   zlib:
     max_pin: x.x
-pixman:
-- '0.34'
 proj4:
 - 4.9.3
 zlib:
