@@ -59,7 +59,6 @@ requirements:
     - hdfeos5
     - jasper
     - jpeg
-    - libgcc  # [osx]
     - libgdal
     - libiconv
     - libnetcdf
