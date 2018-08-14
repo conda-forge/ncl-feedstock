@@ -32,7 +32,7 @@ export EXTRA_INCLUDES=-I${grib2_dir}
 mkdir triangle_tmp && cd triangle_tmp && curl -q http://www.netlib.org/voronoi/triangle.shar | sh && mv triangle.? ../ni/src/lib/hlu/. && cd -
 
 # debugging sed issue
-sed -e 's/@sed/sed/g' -i.backup ni/src/scripts/yMakefile
+sed -e 's/+/|/g' -i.backup ni/src/scripts/yMakefile
 
 # fix path to cpp in ymake -- we should fix this in NCL
 sed -e "s|^\(  set cpp = \)/lib/cpp$|\1cpp|g" -i.backup config/ymake
