@@ -4,6 +4,10 @@ bzip2:
 - '1'
 c_compiler:
 - toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 curl:
 - '7.59'
 fortran_compiler:
@@ -13,7 +17,7 @@ gsl:
 hdf4:
 - '4.2'
 hdf5:
-- 1.10.2
+- 1.10.3
 jasper:
 - 1.900.1
 jpeg:
