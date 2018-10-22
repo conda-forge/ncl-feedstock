@@ -13,7 +13,7 @@ source:
 
 build:
   merge_build_host: True  # [osx]
-  number: 2
+  number: 3
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -29,6 +29,7 @@ requirements:
     - bzip2
     - cairo  # [linux]
     - curl
+    - flex
     - freetype  # [linux]
     - gsl
     - hdf4
@@ -45,12 +46,12 @@ requirements:
     - proj4
     - udunits2
     - zlib
-    - flex
   run:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
     - cairo  # [linux]
     - curl
+    - flex
     - freetype  # [linux]
     - gsl
     - hdf4
