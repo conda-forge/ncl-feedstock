@@ -2,9 +2,6 @@
 
 set -x
 
-echo "Installing XQuartz using homebrew."
-brew cask install xquartz
-
 echo "Removing homebrew from Circle CI to avoid conflicts."
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
 chmod +x ~/uninstall_homebrew
@@ -20,7 +17,7 @@ bash $MINICONDA_FILE -b
 echo "Configuring conda."
 source ~/miniconda3/bin/activate root
 
-conda install --yes --quiet conda-forge::conda-forge-ci-setup=2
+conda install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda-build
 mangle_compiler ./ ./recipe .ci_support/${CONFIG}.yaml
 setup_conda_rc ./ ./recipe ./.ci_support/${CONFIG}.yaml
 
