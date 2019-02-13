@@ -13,7 +13,7 @@ source:
 
 build:
   merge_build_host: True  # [osx]
-  number: 3
+  number: 4
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
