@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export CC="gcc"
+export CC="$GCC"
 export CXXFLAGS="-fPIC $CXXFLAGS"
 export LDFLAGS="-L${PREFIX}/lib $LDFLAGS"
 export CPPFLAGS="-I${PREFIX}/include $CPPFLAGS"
