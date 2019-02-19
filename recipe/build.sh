@@ -38,7 +38,7 @@ sed -e 's/+/|/g' -i.backup ni/src/scripts/yMakefile
 sed -e "s|^\(  set cpp = \)/lib/cpp$|\1$CPP|g" -i.backup config/ymake
 
 # use $CPP, $GCC, and $GFORTRAN variables
-sed -e "s|/usr/bin/cpp|$CPP|g" -e "s|gcc|$GCC|g" -e "s|FCompiler   gfortran|FCompiler   $GFORTRAN|g" -i.backup ${conf_file}
+sed -e "s|/usr/bin/cpp|$CPP|g" -e "s|CCompiler   gcc|CCompiler  '$GCC'|g" -e "s|FCompiler   gfortran|FCompiler  '$GFORTRAN'|g" -i.backup ${conf_file}
 
 sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_lib}|${x11_lib}|g" -e "s|\${CAIROLIB}|${CAIROLIB}|g" -e "s|\${CAIROLIBUSER}|${CAIROLIBUSER}|g" -e "s|\${grib2_dir}|${grib2_dir}|g" "${RECIPE_DIR}/Site.local.template" > config/Site.local
 
