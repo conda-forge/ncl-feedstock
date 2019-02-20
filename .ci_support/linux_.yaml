@@ -10,6 +10,8 @@ channel_targets:
 - conda-forge main
 curl:
 - '7.59'
+cxx_compiler:
+- gxx
 docker_image:
 - condaforge/linux-anvil-comp7
 fortran_compiler:

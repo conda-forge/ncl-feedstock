@@ -30,7 +30,7 @@ run_conda_forge_build_setup
 # "recipe/yum_requirements.txt" file. After updating that file,
 # run "conda smithy rerender" and this line will be updated
 # automatically.
-/usr/bin/sudo -n yum install -y csh libX11-devel libXaw-devel libXmu-devel byacc
+/usr/bin/sudo -n yum install -y csh byacc
 
 
 # make the build number clobber

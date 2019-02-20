@@ -2,9 +2,6 @@
 
 set -x
 
-echo "Installing XQuartz using homebrew."
-brew cask install xquartz
-
 echo "Removing homebrew from Circle CI to avoid conflicts."
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
 chmod +x ~/uninstall_homebrew
