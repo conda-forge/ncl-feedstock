@@ -24,6 +24,9 @@ requirements:
     - pkg-config
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - xorg-imake  # [linux]
+    - xorg-makedepend  # [linux]
   host:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
@@ -46,6 +49,10 @@ requirements:
     - udunits2
     - zlib
     - flex
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
   run:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
