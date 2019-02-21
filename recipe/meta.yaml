@@ -12,8 +12,7 @@ source:
     - grib2.patch
 
 build:
-  merge_build_host: True  # [osx]
-  number: 3
+  number: 4
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -24,6 +23,9 @@ requirements:
     - pkg-config
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - xorg-imake  # [linux]
+    - xorg-makedepend  # [linux]
   host:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
@@ -46,6 +48,11 @@ requirements:
     - udunits2
     - zlib
     - flex
+    - xorg-libx11  # [linux]
+    - xorg-libxaw  # [linux]
+    - xorg-libxmu  # [linux]
+    - xorg-libxrender  # [linux]
+    - openmp  # [osx]
   run:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
@@ -74,6 +81,7 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-makedepend  # [linux]
+    - openmp  # [osx]
 
 test:
   source_files:
