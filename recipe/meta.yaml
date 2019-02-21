@@ -12,7 +12,6 @@ source:
     - grib2.patch
 
 build:
-  merge_build_host: True  # [osx]
   number: 4
   skip: True  # [win]
   features:
