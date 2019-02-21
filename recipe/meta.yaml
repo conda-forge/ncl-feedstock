@@ -52,6 +52,7 @@ requirements:
     - xorg-libxaw  # [linux]
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
+    - openmp  # [osx]
   run:
     - blas 1.1 {{ variant }}  # [not win]
     - bzip2
@@ -80,6 +81,7 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-makedepend  # [linux]
+    - openmp  # [osx]
 
 test:
   source_files:
