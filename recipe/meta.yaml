@@ -1,4 +1,4 @@
-{% set version = "6.5.0" %}
+{% set version = "ed6016bf579f8c8e8f77341503daef3c532f1069" %}
 {% set variant = "openblas" %}
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-  sha256: 133446f3302eddf237db56bf349e1ebf228240a7320699acc339a3d7ee414591
+  sha256: ef12d37abc6d2e176a3030ba80884f08d7ab70e5b707b4b8fefd98bb558e9807
   patches:
     - grib2.patch
 
 build:
-  number: 4
+  number: 0
   skip: True  # [win]
   features:
     - blas_{{ variant }}  # [not win]
@@ -91,6 +91,8 @@ test:
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash  # [not win]
+
 
 about:
   home: http://ncl.ucar.edu/
