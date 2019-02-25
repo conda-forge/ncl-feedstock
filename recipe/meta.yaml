@@ -1,4 +1,4 @@
-{% set version = "ed6016bf579f8c8e8f77341503daef3c532f1069" %}
+{% set version = "6.6.0" %}
 {% set variant = "openblas" %}
 
 package:
@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
+  url: https://github.com/NCAR/ncl/archive/ed6016bf579f8c8e8f77341503daef3c532f1069.tar.gz
   sha256: ef12d37abc6d2e176a3030ba80884f08d7ab70e5b707b4b8fefd98bb558e9807
   patches:
     - grib2.patch
@@ -96,8 +96,8 @@ test:
 
 about:
   home: http://ncl.ucar.edu/
-  license: 'NCL Source Code'
-  license_file: COPYING
+  license: 'Apache 2.0'
+  license_file: LICENSE
   summary: 'NCAR Command Language'
 
 extra:
