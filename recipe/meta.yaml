@@ -86,6 +86,9 @@ requirements:
 test:
   source_files:
     - install/make-tarfile/check_files
+  requires:
+    - git
+    - imagemagick
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'

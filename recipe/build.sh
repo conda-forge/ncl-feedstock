@@ -11,6 +11,8 @@ if [ "$(uname)" = "Darwin" ]; then
     export CXX="${CLANG}++"
     export FC
 
+    export PATH="$PATH:/opt/X11/bin"
+
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib"
         x11_inc="-I/opt/X11/include -I/opt/X11/include/freetype2"
