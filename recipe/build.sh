@@ -7,9 +7,11 @@ export CFLAGS="-I${PREFIX}/include $CFLAGS"
 
 if [ "$(uname)" = "Darwin" ]; then
     export CC="${CLANG}"
-    export CPP="${CLANG} -E -traditional"
+    export CPP="clang-cpp -traditional"
     export CXX="${CLANG}++"
     export FC
+
+    export PATH="$PATH:/opt/X11/bin"
 
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib"
