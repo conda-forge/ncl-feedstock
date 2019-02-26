@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/NCAR/ncl/archive/ed6016bf579f8c8e8f77341503daef3c532f1069.tar.gz
-  sha256: ef12d37abc6d2e176a3030ba80884f08d7ab70e5b707b4b8fefd98bb558e9807
+  url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
+  sha256: d8202340a878e78c88454d136ea796d7dc7677d0df31739c0d15598c95ee35e7
   patches:
     - grib2.patch
 
@@ -86,16 +86,11 @@ requirements:
 test:
   source_files:
     - install/make-tarfile/check_files
-  requires:
-    - git
-    - imagemagick
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
-    - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash  # [not win]
-
 
 about:
   home: http://ncl.ucar.edu/
