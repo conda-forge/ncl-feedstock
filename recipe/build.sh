@@ -7,7 +7,7 @@ export CFLAGS="-I${PREFIX}/include $CFLAGS"
 
 if [ "$(uname)" = "Darwin" ]; then
     export CC="${CLANG}"
-    export CPP="${CLANG} -E -traditional"
+    export CPP="clang-cpp -traditional"
     export CXX="${CLANG}++"
     export FC
 
