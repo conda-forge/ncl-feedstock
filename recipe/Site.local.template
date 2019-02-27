@@ -26,5 +26,6 @@ ${CAIROLIBUSER}
 #define CxxCompiler "${CXX}"
 #define CppCommand  "${CPP}"
 #define LdCommand   "${LD}"
+#define RanLib      "${RANLIB}"
 
 #endif /* SecondSite */
