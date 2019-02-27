@@ -1,4 +1,4 @@
-{% set version = "6.6.0" %}
+{% set version = "6.6.1" %}
 {% set variant = "openblas" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-  sha256: d8202340a878e78c88454d136ea796d7dc7677d0df31739c0d15598c95ee35e7
+  sha256: d3a9848786fbc40649162ce227a968e1ec7d2ed6e0511f78e3c280cc22f6b361
   patches:
     - grib2.patch
 
