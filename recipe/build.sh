@@ -51,7 +51,7 @@ sed -e 's/+/|/g' -i.backup ni/src/ncl/yMakefile
 sed -e "s|^\(  set cpp = \)/lib/cpp$|\1'$CPP'|g" -i.backup config/ymake
 
 # generate Site.local
-sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_lib}|${x11_lib}|g" -e "s|\${CAIROLIB}|${CAIROLIB}|g" -e "s|\${CAIROLIBUSER}|${CAIROLIBUSER}|g" -e "s|\${grib2_dir}|${grib2_dir}|g" -e "s|\${CC}|${CC}|g" -e "s|\${FC}|${FC}|g" -e "s|\${CPP}|${CPP}|g" -e "s|\${CXX}|${CXX}|g" -e "s|\${LD}|${LD}|g" -e "s|\${RANLIB}|${RANLIB}|g" "${RECIPE_DIR}/Site.local.template" > config/Site.local
+sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_lib}|${x11_lib}|g" -e "s|\${CAIROLIB}|${CAIROLIB}|g" -e "s|\${CAIROLIBUSER}|${CAIROLIBUSER}|g" -e "s|\${grib2_dir}|${grib2_dir}|g" -e "s|\${CC}|${CC}|g" -e "s|\${FC}|${FC}|g" -e "s|\${CPP}|${CPP}|g" -e "s|\${CXX}|${CXX}|g" -e "s|\${LD}|${LD}|g" -e "s|\${RANLIB}|${RANLIB}|g" -e "s|\${AR}|${AR}|g" "${RECIPE_DIR}/Site.local.template" > config/Site.local
 
 echo -e "n\n" | ./Configure
 make Everything

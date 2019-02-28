@@ -87,6 +87,7 @@ test:
   source_files:
     - install/make-tarfile/check_files
   requires:
+    - coreutils
     - git
     - imagemagick
   commands:

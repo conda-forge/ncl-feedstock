@@ -21,11 +21,13 @@
 ${CAIROLIB}
 ${CAIROLIBUSER}
 
-#define CCompiler   "${CC}"
-#define FCompiler   "${FC}"
-#define CxxCompiler "${CXX}"
-#define CppCommand  "${CPP}"
-#define LdCommand   "${LD}"
-#define RanLib      "${RANLIB}"
+#define CCompiler    "${CC}"
+#define FCompiler    "${FC}"
+#define CxxCompiler  "${CXX}"
+#define CppCommand   "${CPP}"
+#define LdCommand    "${LD}"
+#define RanLib       "${RANLIB}"
+#define ArCommand    "${AR}"
+#define ArSrcCommand "${AR}"
 
 #endif /* SecondSite */
