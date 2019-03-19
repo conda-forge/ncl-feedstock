@@ -1,5 +1,4 @@
 {% set version = "6.6.2" %}
-{% set variant = "openblas" %}
 
 package:
   name: ncl
@@ -12,10 +11,9 @@ source:
     - grib2.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   features:
-    - blas_{{ variant }}  # [not win]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -27,7 +25,8 @@ requirements:
     - xorg-imake  # [linux]
     - xorg-makedepend  # [linux]
   host:
-    - blas 1.1 {{ variant }}  # [not win]
+    - libblas
+    - libcblas
     - bzip2
     - cairo  # [linux]
     - curl
@@ -54,7 +53,6 @@ requirements:
     - xorg-libxrender  # [linux]
     - openmp  # [osx]
   run:
-    - blas 1.1 {{ variant }}  # [not win]
     - bzip2
     - cairo  # [linux]
     - curl
