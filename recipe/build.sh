@@ -1,9 +1,9 @@
 #!/bin/sh
 
-export CXXFLAGS="-fPIC $CXXFLAGS"
-export LDFLAGS="-L${PREFIX}/lib $LDFLAGS"
-export CPPFLAGS="-I${PREFIX}/include $CPPFLAGS"
-export CFLAGS="-I${PREFIX}/include $CFLAGS"
+export CXXFLAGS="-fPIC ${CXXFLAGS}"
+export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"
+export CPPFLAGS="-I${PREFIX}/include -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CPPFLAGS}"
+export CFLAGS="-I${PREFIX}/include -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
     export CC="${CLANG}"
@@ -11,7 +11,7 @@ if [ "$(uname)" = "Darwin" ]; then
     export CXX="${CLANG}++"
     export FC
 
-    export PATH="$PATH:/opt/X11/bin"
+    export PATH="${PATH}:/opt/X11/bin"
 
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib"
@@ -24,12 +24,12 @@ if [ "$(uname)" = "Darwin" ]; then
         exit
     fi
 
-    LDFLAGS="-headerpad_max_install_names $LDFLAGS"
+    LDFLAGS="-headerpad_max_install_names ${LDFLAGS}"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
-    export CC="$GCC"
+    export CC="${GCC}"
     export CPP="${CPP} -traditional"
-    export CXX="$GXX"
+    export CXX="${GXX}"
     export FC
 
     conf_file=config/LINUX
@@ -56,11 +56,11 @@ sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_l
 echo -e "n\n" | ./Configure
 make Everything
 
-ACTIVATE_DIR="$PREFIX/etc/conda/activate.d"
-DEACTIVATE_DIR="$PREFIX/etc/conda/deactivate.d"
+ACTIVATE_DIR="${PREFIX}/etc/conda/activate.d"
+DEACTIVATE_DIR="${PREFIX}/etc/conda/deactivate.d"
 
-mkdir -p "$ACTIVATE_DIR"
-mkdir -p "$DEACTIVATE_DIR"
+mkdir -p "${ACTIVATE_DIR}"
+mkdir -p "${DEACTIVATE_DIR}"
 
-cp "$RECIPE_DIR/scripts/activate.sh" "$ACTIVATE_DIR/ncl-activate.sh"
-cp "$RECIPE_DIR/scripts/deactivate.sh" "$DEACTIVATE_DIR/ncl-deactivate.sh"
+cp "${RECIPE_DIR}/scripts/activate.sh" "${ACTIVATE_DIR}/ncl-activate.sh"
+cp "${RECIPE_DIR}/scripts/deactivate.sh" "${DEACTIVATE_DIR}/ncl-deactivate.sh"
