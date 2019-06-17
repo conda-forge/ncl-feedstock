@@ -78,7 +78,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 pixman:
-- '0.34'
+- '0.38'
 proj4:
 - 6.1.0
 zlib:
