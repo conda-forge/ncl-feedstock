@@ -35,13 +35,13 @@ libblas:
 libcblas:
 - 3.8 *netlib
 libgdal:
-- '2.4'
+- '3.0'
 libiconv:
 - '1.15'
 libnetcdf:
 - 4.6.2
 libpng:
-- 1.6.35
+- '1.6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
