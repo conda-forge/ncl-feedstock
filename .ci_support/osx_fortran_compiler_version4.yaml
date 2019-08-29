@@ -65,11 +65,7 @@ pin_run_as_build:
     max_pin: x.x.x
   libpng:
     max_pin: x.x
-  proj4:
-    max_pin: x.x.x
   zlib:
     max_pin: x.x
-proj4:
-- 6.1.1
 zlib:
 - '1.2'
