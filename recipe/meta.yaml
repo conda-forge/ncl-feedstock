@@ -38,7 +38,7 @@ requirements:
     - hdfeos5
     - jasper
     - jpeg
-    - libgdal
+    - libgdal >=2.4.0,<3
     - libiconv
     - libnetcdf
     - libpng
@@ -64,7 +64,7 @@ requirements:
     - hdfeos5
     - jasper
     - jpeg
-    - libgdal
+    - libgdal >=2.4.0,<3
     - libiconv
     - libnetcdf
     - libpng
