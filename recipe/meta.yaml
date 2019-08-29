@@ -11,7 +11,7 @@ source:
     - grib2.patch
 
 build:
-  number: 8
+  number: 9
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -43,7 +43,7 @@ requirements:
     - libnetcdf
     - libpng
     - pixman  # [linux]
-    - proj4
+    - proj4 >=5.2.0,<6
     - udunits2
     - zlib
     - flex
@@ -69,7 +69,7 @@ requirements:
     - libnetcdf
     - libpng
     - pixman  # [linux]
-    - proj4
+    - proj4 >=5.2.0,<6
     - udunits2
     - zlib
     - esmf
@@ -107,3 +107,4 @@ extra:
     - marylhaley
     - david-ian-brown
     - ocefpaf
+    - xylar
