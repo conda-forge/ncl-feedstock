@@ -11,7 +11,7 @@ source:
     - grib2.patch
 
 build:
-  number: 9
+  number: 10
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -43,7 +43,7 @@ requirements:
     - libnetcdf
     - libpng
     - pixman  # [linux]
-    - proj4
+    - proj4 {{ proj4 }}
     - udunits2
     - zlib
     - flex
@@ -69,7 +69,7 @@ requirements:
     - libnetcdf
     - libpng
     - pixman  # [linux]
-    - proj4
+    - proj4 {{ proj4 }}
     - udunits2
     - zlib
     - esmf
@@ -97,7 +97,7 @@ test:
 
 about:
   home: http://ncl.ucar.edu/
-  license: 'Apache 2.0'
+  license: Apache-2.0
   license_file: LICENSE
   summary: 'NCAR Command Language'
 
