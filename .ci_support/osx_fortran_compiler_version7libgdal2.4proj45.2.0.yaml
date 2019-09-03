@@ -1,0 +1,75 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+bzip2:
+- '1'
+c_compiler:
+- clang
+c_compiler_version:
+- '4'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+curl:
+- '7.64'
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '4'
+fortran_compiler:
+- gfortran
+fortran_compiler_version:
+- '7'
+gsl:
+- '2.5'
+hdf4:
+- '4.2'
+hdf5:
+- 1.10.5
+jasper:
+- 1.900.1
+jpeg:
+- '9'
+libblas:
+- 3.8 *netlib
+libcblas:
+- 3.8 *netlib
+libgdal:
+- '2.4'
+libiconv:
+- '1.15'
+libnetcdf:
+- 4.6.2
+libpng:
+- '1.6'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
+pin_run_as_build:
+  bzip2:
+    max_pin: x
+  curl:
+    max_pin: x
+  hdf4:
+    max_pin: x.x
+  jasper:
+    max_pin: x
+  jpeg:
+    max_pin: x
+  libgdal:
+    max_pin: x.x
+  libiconv:
+    max_pin: x.x
+  libnetcdf:
+    max_pin: x.x.x
+  libpng:
+    max_pin: x.x
+  proj4:
+    max_pin: x.x.x
+  zlib:
+    max_pin: x.x
+proj4:
+- 5.2.0
+zlib:
+- '1.2'
