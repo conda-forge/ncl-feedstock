@@ -3,7 +3,7 @@ About ncl
 
 Home: http://ncl.ucar.edu/
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
@@ -29,24 +29,87 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_libgdal2.4proj45.2.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=linux&configuration=linux_libgdal2.4proj45.2.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_fortran_compiler_version4</td>
+              <td>linux_libgdal2.4proj46.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=linux&configuration=linux_libgdal2.4proj46.1.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_fortran_compiler_version7</td>
+              <td>linux_libgdal3.0proj45.2.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=linux&configuration=linux_libgdal3.0proj45.2.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_libgdal3.0proj46.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=linux&configuration=linux_libgdal3.0proj46.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version4libgdal2.4proj45.2.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4libgdal2.4proj45.2.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version4libgdal2.4proj46.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4libgdal2.4proj46.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version4libgdal3.0proj45.2.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4libgdal3.0proj45.2.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version4libgdal3.0proj46.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4libgdal3.0proj46.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version7libgdal2.4proj45.2.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7libgdal2.4proj45.2.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version7libgdal2.4proj46.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7libgdal2.4proj46.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version7libgdal3.0proj45.2.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7libgdal3.0proj45.2.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_fortran_compiler_version7libgdal3.0proj46.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5629&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ncl-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7libgdal3.0proj46.1.1" alt="variant">
                 </a>
               </td>
             </tr>

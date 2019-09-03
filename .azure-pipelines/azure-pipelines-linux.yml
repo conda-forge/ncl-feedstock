@@ -10,8 +10,12 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_:
-        CONFIG: linux_
+      linux_libgdal2.4proj45.2.0:
+        CONFIG: linux_libgdal2.4proj45.2.0
+        UPLOAD_PACKAGES: True
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_libgdal3.0proj46.1.1:
+        CONFIG: linux_libgdal3.0proj46.1.1
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
   steps:
