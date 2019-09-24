@@ -1,9 +1,0 @@
-proj4:
-  - 5.2.0
-  - 6.1.1
-libgdal:
-  - 2.4
-  - 3.0
-zipped_keys:
-  - proj4
-  - libgdal
