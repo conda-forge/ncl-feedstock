@@ -19,7 +19,7 @@ cxx_compiler_version:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '4'
+- '7'
 gsl:
 - '2.5'
 hdf4:
@@ -35,7 +35,7 @@ libblas:
 libcblas:
 - 3.8 *netlib
 libgdal:
-- '2.4'
+- '3.0'
 libiconv:
 - '1.15'
 libnetcdf:
@@ -65,11 +65,9 @@ pin_run_as_build:
     max_pin: x.x.x
   libpng:
     max_pin: x.x
-  proj4:
-    max_pin: x.x.x
   zlib:
     max_pin: x.x
-proj4:
-- 5.2.0
+proj:
+- 6.2.0
 zlib:
 - '1.2'

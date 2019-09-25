@@ -71,13 +71,11 @@ pin_run_as_build:
     max_pin: x.x
   pixman:
     max_pin: x.x
-  proj4:
-    max_pin: x.x.x
   zlib:
     max_pin: x.x
 pixman:
 - '0.38'
-proj4:
-- 6.1.1
+proj:
+- 6.2.0
 zlib:
 - '1.2'

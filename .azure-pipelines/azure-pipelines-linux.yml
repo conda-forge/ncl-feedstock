@@ -10,12 +10,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_libgdal2.4proj45.2.0:
-        CONFIG: linux_libgdal2.4proj45.2.0
-        UPLOAD_PACKAGES: True
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_libgdal3.0proj46.1.1:
-        CONFIG: linux_libgdal3.0proj46.1.1
+      linux_:
+        CONFIG: linux_
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
   steps:
@@ -29,6 +25,7 @@ jobs:
 
   - script: |
         export CI=azure
+        export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
         .azure-pipelines/run_docker_build.sh
     displayName: Run docker build
     env:
