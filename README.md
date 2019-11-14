@@ -158,4 +158,5 @@ Feedstock Maintainers
 * [@khallock](https://github.com/khallock/)
 * [@marylhaley](https://github.com/marylhaley/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@xylar](https://github.com/xylar/)
 
