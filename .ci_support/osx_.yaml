@@ -61,13 +61,11 @@ pin_run_as_build:
     max_pin: x.x
   libiconv:
     max_pin: x.x
-  libnetcdf:
-    max_pin: x.x.x
   libpng:
     max_pin: x.x
   zlib:
     max_pin: x.x
 proj:
-- 6.2.1
+- 6.3.0
 zlib:
 - '1.2'
