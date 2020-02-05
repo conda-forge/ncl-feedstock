@@ -21,7 +21,7 @@ fortran_compiler:
 fortran_compiler_version:
 - '7'
 gsl:
-- '2.5'
+- '2.6'
 hdf4:
 - '4.2'
 hdf5:
