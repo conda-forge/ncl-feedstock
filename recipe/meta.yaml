@@ -11,7 +11,7 @@ source:
     - grib2.patch
 
 build:
-  number: 18
+  number: 19
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -99,7 +99,7 @@ about:
   home: http://ncl.ucar.edu/
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'NCAR Command Language'
+  summary: NCAR Command Language
 
 extra:
   recipe-maintainers:
