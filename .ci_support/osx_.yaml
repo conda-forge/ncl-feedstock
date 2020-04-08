@@ -66,6 +66,6 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 proj:
-- 6.3.1
+- 7.0.0
 zlib:
 - '1.2'
