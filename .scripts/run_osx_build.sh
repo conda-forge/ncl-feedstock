@@ -31,6 +31,9 @@ echo -e "\n\nSetting up the condarc and mangling the compiler."
 setup_conda_rc ./ ./recipe ./.ci_support/${CONFIG}.yaml
 mangle_compiler ./ ./recipe .ci_support/${CONFIG}.yaml
 
+echo -e "\n\nInstall XQuartz using 'brew cask install ...'."
+brew cask install xquartz
+
 echo -e "\n\nMangling homebrew in the CI to avoid conflicts."
 /usr/bin/sudo mangle_homebrew
 /usr/bin/sudo -k
