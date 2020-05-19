@@ -63,4 +63,6 @@ mkdir -p "${ACTIVATE_DIR}"
 mkdir -p "${DEACTIVATE_DIR}"
 
 cp "${RECIPE_DIR}/scripts/activate.sh" "${ACTIVATE_DIR}/ncl-activate.sh"
+cp "${RECIPE_DIR}/scripts/activate.csh" "${ACTIVATE_DIR}/ncl-activate.csh"
 cp "${RECIPE_DIR}/scripts/deactivate.sh" "${DEACTIVATE_DIR}/ncl-deactivate.sh"
+cp "${RECIPE_DIR}/scripts/deactivate.csh" "${DEACTIVATE_DIR}/ncl-deactivate.csh"
