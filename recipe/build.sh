@@ -13,6 +13,9 @@ if [ "$(uname)" = "Darwin" ]; then
 
     export PATH="${PATH}:/opt/X11/bin"
 
+    # install xquartz
+    /usr/local/conda_mangled/Homebrew/bin/brew cask install xquartz
+
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib"
         x11_inc="-I/opt/X11/include -I/opt/X11/include/freetype2"
@@ -63,4 +66,6 @@ mkdir -p "${ACTIVATE_DIR}"
 mkdir -p "${DEACTIVATE_DIR}"
 
 cp "${RECIPE_DIR}/scripts/activate.sh" "${ACTIVATE_DIR}/ncl-activate.sh"
+cp "${RECIPE_DIR}/scripts/activate.csh" "${ACTIVATE_DIR}/ncl-activate.csh"
 cp "${RECIPE_DIR}/scripts/deactivate.sh" "${DEACTIVATE_DIR}/ncl-deactivate.sh"
+cp "${RECIPE_DIR}/scripts/deactivate.csh" "${DEACTIVATE_DIR}/ncl-deactivate.csh"
