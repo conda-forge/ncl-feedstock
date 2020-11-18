@@ -1,11 +1,13 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 bzip2:
 - '1'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '10'
+- '7'
+cairo:
+- '1.16'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -13,13 +15,17 @@ channel_targets:
 curl:
 - '7'
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '10'
+- '7'
+docker_image:
+- quay.io/condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '7.5'
+- '7'
+freetype:
+- '2'
 gsl:
 - '2.6'
 hdf4:
@@ -27,7 +33,7 @@ hdf4:
 hdf5:
 - 1.10.6
 jasper:
-- 1.900.1
+- '1'
 jpeg:
 - '9'
 libblas:
@@ -42,12 +48,14 @@ libnetcdf:
 - 4.7.4
 libpng:
 - '1.6'
-macos_machine:
-- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   bzip2:
     max_pin: x
+  cairo:
+    max_pin: x.x
   curl:
+    max_pin: x
+  freetype:
     max_pin: x
   hdf4:
     max_pin: x.x
@@ -63,9 +71,15 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+pixman:
+- '0'
 proj:
 - 7.1.1
 target_platform:
-- osx-64
+- linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
 zlib:
 - '1.2'
