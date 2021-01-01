@@ -11,7 +11,7 @@ source:
     - grib2.patch
 
 build:
-  number: 23
+  number: 24
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -51,7 +51,7 @@ requirements:
     - xorg-libxaw  # [linux]
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
-    - openmp  # [osx]
+    - llvm-openmp  # [osx]
   run:
     - bzip2
     - cairo  # [linux]
@@ -79,7 +79,7 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-makedepend  # [linux]
-    - openmp  # [osx]
+    - llvm-openmp  # [osx]
 
 test:
   source_files:
