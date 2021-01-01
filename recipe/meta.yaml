@@ -25,6 +25,8 @@ requirements:
     - xorg-imake  # [linux]
     - xorg-makedepend  # [linux]
     - python 2.7
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   host:
     - libblas
     - libcblas
@@ -52,7 +54,7 @@ requirements:
     - xorg-libxaw  # [linux]
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
-    - openmp  # [osx]
+    - xorg-libxt   # [linux]
   run:
     - bzip2
     - cairo  # [linux]
@@ -80,7 +82,6 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-makedepend  # [linux]
-    - openmp  # [osx]
 
 test:
   source_files:
