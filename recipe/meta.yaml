@@ -97,8 +97,10 @@ test:
 
 about:
   home: http://ncl.ucar.edu/
-  license: Apache-2.0
-  license_file: LICENSE
+  license: Apache-2.0 and LicenseRef-Proprietary-Triangle
+  license_file:
+    - LICENSE
+    - LICENSE_triangle.txt
   summary: NCAR Command Language
 
 extra:
