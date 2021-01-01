@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('cxx') }}
     - xorg-imake  # [linux]
     - xorg-makedepend  # [linux]
+    - python 2.7
   host:
     - libblas
     - libcblas
