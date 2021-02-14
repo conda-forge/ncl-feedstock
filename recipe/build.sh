@@ -13,7 +13,7 @@ if [ "$(uname)" = "Darwin" ]; then
     export PATH="${PATH}:/opt/X11/bin"
 
     # install xquartz
-    mv /usr/local/conda_mangled/* /usr/local/
+    sudo mv /usr/local/conda_mangled/* /usr/local/
     /usr/local/Homebrew/bin/brew install --cask xquartz
 
     if [ -d "/opt/X11" ]; then
