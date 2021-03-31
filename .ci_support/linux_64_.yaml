@@ -3,9 +3,11 @@ bzip2:
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
+- '9'
 cairo:
 - '1.16'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -15,15 +17,15 @@ curl:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7'
+- '9'
 docker_image:
-- condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '7'
+- '9'
 freetype:
-- 2.9.1
+- '2'
 gsl:
 - '2.6'
 hdf4:
@@ -31,7 +33,7 @@ hdf4:
 hdf5:
 - 1.10.6
 jasper:
-- 1.900.1
+- '1'
 jpeg:
 - '9'
 libblas:
@@ -67,15 +69,19 @@ pin_run_as_build:
     max_pin: x.x
   libpng:
     max_pin: x.x
-  pixman:
-    max_pin: x.x
   zlib:
     max_pin: x.x
 pixman:
-- '0.38'
+- '0'
 proj:
-- 7.1.1
+- 7.2.0
 target_platform:
 - linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
+- - cdt_name
+  - docker_image
 zlib:
 - '1.2'
