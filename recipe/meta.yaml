@@ -11,7 +11,7 @@ source:
     - grib2.patch
 
 build:
-  number: 23
+  number: 24
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -91,8 +91,6 @@ test:
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
     - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash
 
 about:
