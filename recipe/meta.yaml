@@ -11,7 +11,7 @@ source:
     - grib2.patch
 
 build:
-  number: 24
+  number: 23
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
