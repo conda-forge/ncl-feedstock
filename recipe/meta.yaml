@@ -12,7 +12,7 @@ source:
 
 build:
   number: 24
-  skip: True  # [win]
+  skip: True  # [win or linux]
   features:
   detect_binary_files_with_prefix: true
 
