@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - xorg-imake  # [linux]
-    - xorg-makedepend  # [linux]
+    - xorg-makedepend
     - python 2.7
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
