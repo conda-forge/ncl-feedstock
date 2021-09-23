@@ -14,6 +14,7 @@ if [ "$(uname)" = "Darwin" ]; then
 
     # install xquartz
     /usr/local/conda_mangled/Homebrew/bin/brew install --cask xquartz
+    /usr/local/conda_mangled/Homebrew/bin/brew install makedepend
 
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib"
