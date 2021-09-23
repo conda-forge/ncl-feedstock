@@ -8,7 +8,8 @@ source:
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
   sha256: cad4ee47fbb744269146e64298f9efa206bc03e7b86671e9729d8986bb4bc30e
   patches:
-    - grib2.patch
+    - 0000-grib2.patch
+    - 0001-extern-vars.patch
 
 build:
   number: 24
