@@ -1,20 +1,19 @@
 #!/bin/sh
 
 export CXXFLAGS="-fPIC ${CXXFLAGS}"
-export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"
-export CPPFLAGS="-I${PREFIX}/include -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CPPFLAGS}"
-export CFLAGS="-I${PREFIX}/include -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CFLAGS}"
+export CPPFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CPPFLAGS}"
+export CFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
     export CC="${CLANG}"
     export CPP="clang-cpp -traditional"
-    export CXX="${CLANG}++"
+    export CXX="${CLANGXX}"
     export FC
 
     export PATH="${PATH}:/opt/X11/bin"
 
     # install xquartz
-    /usr/local/conda_mangled/Homebrew/bin/brew cask install xquartz
+    /usr/local/conda_mangled/Homebrew/bin/brew install --cask xquartz
 
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib"

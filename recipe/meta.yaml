@@ -8,10 +8,11 @@ source:
   url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
   sha256: cad4ee47fbb744269146e64298f9efa206bc03e7b86671e9729d8986bb4bc30e
   patches:
-    - grib2.patch
+    - 0000-grib2.patch
+    - 0001-extern-vars.patch
 
 build:
-  number: 23
+  number: 24
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -23,7 +24,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - xorg-imake  # [linux]
-    - xorg-makedepend  # [linux]
+    - xorg-makedepend
+    - python 2.7
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   host:
     - libblas
     - libcblas
@@ -51,7 +55,7 @@ requirements:
     - xorg-libxaw  # [linux]
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
-    - openmp  # [osx]
+    - xorg-libxt   # [linux]
   run:
     - bzip2
     - cairo  # [linux]
@@ -79,7 +83,6 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-makedepend  # [linux]
-    - openmp  # [osx]
 
 test:
   source_files:
@@ -91,14 +94,14 @@ test:
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
     - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash
 
 about:
   home: http://ncl.ucar.edu/
-  license: Apache-2.0
-  license_file: LICENSE
+  license: Apache-2.0 and LicenseRef-Proprietary-Triangle
+  license_file:
+    - LICENSE
+    - LICENSE_triangle.txt
   summary: NCAR Command Language
 
 extra:
