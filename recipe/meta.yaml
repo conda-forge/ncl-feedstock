@@ -47,7 +47,7 @@ requirements:
     - libnetcdf
     - libpng
     - pixman  # [linux]
-    - proj
+    - proj <8
     - udunits2
     - zlib
     - flex
@@ -73,7 +73,7 @@ requirements:
     - libnetcdf
     - libpng
     - pixman  # [linux]
-    - proj
+    - proj <8
     - udunits2
     - zlib
     - esmf
