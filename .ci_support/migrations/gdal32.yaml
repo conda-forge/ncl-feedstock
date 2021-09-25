@@ -2,6 +2,8 @@ __migrator:
   build_number: 1
   kind: version
   migration_number: 1
-hdf5:
-- 1.10.6
-migrator_ts: 1587001869.689825
+gdal:
+- '3.2'
+libgdal:
+- '3.2'
+migrator_ts: 1604390922.414637
