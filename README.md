@@ -3,7 +3,7 @@ About ncl
 
 Home: http://ncl.ucar.edu/
 
-Package license: Apache-2.0
+Package license: Apache-2.0 and LicenseRef-Proprietary-Triangle
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ncl-feedstock/blob/master/LICENSE.txt)
 
@@ -146,4 +146,5 @@ Feedstock Maintainers
 * [@marylhaley](https://github.com/marylhaley/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@xylar](https://github.com/xylar/)
+* [@zklaus](https://github.com/zklaus/)
 
