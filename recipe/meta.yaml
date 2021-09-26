@@ -12,7 +12,7 @@ source:
     - 0001-extern-vars.patch
 
 build:
-  number: 26
+  number: 27
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
