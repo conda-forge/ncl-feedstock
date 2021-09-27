@@ -1,8 +1,6 @@
 #!/bin/sh
 
 export CXXFLAGS="-fPIC ${CXXFLAGS}"
-export CPPFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CPPFLAGS}"
-export CFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 ${CFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
     export CC="${CLANG}"
