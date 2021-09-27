@@ -45,7 +45,7 @@ libgdal:
 libiconv:
 - '1.16'
 libnetcdf:
-- 4.7.4
+- 4.8.0
 libpng:
 - '1.6'
 pin_run_as_build:
