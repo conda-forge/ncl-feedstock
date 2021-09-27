@@ -27,7 +27,7 @@ fortran_compiler_version:
 freetype:
 - '2'
 gsl:
-- '2.6'
+- '2.7'
 hdf4:
 - '4.2'
 hdf5:
