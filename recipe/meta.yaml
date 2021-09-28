@@ -39,7 +39,7 @@ requirements:
     - hdf4
     - hdf5
     - hdfeos2
-    - hdfeos5
+    - hdfeos5 =5.1.16=h3fd3831_9
     - jasper
     - jpeg
     - libgdal
