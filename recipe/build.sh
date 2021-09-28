@@ -1,5 +1,9 @@
 #!/bin/sh
 
+mamba repoquery depends hdfeos5
+
+exit 1
+
 export CXXFLAGS="-fPIC ${CXXFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
