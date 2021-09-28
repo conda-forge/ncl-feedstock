@@ -26,7 +26,6 @@ requirements:
     - {{ compiler('cxx') }}
     - xorg-imake  # [linux]
     - xorg-makedepend
-    - python 2.7
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
   host:
