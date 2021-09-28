@@ -1,2 +1,1 @@
-build_with_mambabuild: true
 conda_forge_output_validation: true
