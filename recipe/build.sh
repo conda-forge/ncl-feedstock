@@ -1,5 +1,7 @@
 #!/bin/sh
 
+conda install --force-reinstall --freeze-installed --no-deps proj
+
 export CXXFLAGS="-fPIC ${CXXFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
