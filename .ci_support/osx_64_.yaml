@@ -25,7 +25,7 @@ gsl:
 hdf4:
 - '4.2'
 hdf5:
-- 1.10.6
+- 1.12.1
 jasper:
 - '1'
 jpeg:
@@ -39,7 +39,7 @@ libgdal:
 libiconv:
 - '1.16'
 libnetcdf:
-- 4.7.4
+- 4.8.1
 libpng:
 - '1.6'
 llvm_openmp:
@@ -65,6 +65,8 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+proj:
+- 8.0.1
 target_platform:
 - osx-64
 zip_keys:
