@@ -41,7 +41,7 @@ libblas:
 libcblas:
 - 3.8 *netlib
 libgdal:
-- '3.2'
+- '3.3'
 libiconv:
 - '1.16'
 libnetcdf:
