@@ -1,8 +1,9 @@
 #!/bin/sh
 
 echo "BUILD_PREFIX: $BUILD_PREFIX"
-conda list --json -p $BUILD_PREFIX proj
-PROJ_VERSI=$(conda list --json -p $BUILD_PREFIX proj |jq '.[0]|[.["name"], .["version"], .["build_string"]]|join("=")')
+echo ${BUILD_PREFIX}
+conda list --json -p ${BUILD_PREFIX} proj
+PROJ_VERSI=$(conda list --json -p ${BUILD_PREFIX} proj |jq '.[0]|[.["name"], .["version"], .["build_string"]]|join("=")')
 echo "PROJ_VERSI: $PROJ_VERSI"
 conda install --force-reinstall --freeze-installed --no-deps -y $PROJ_VERSI
 
