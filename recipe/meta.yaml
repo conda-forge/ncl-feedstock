@@ -42,6 +42,7 @@ requirements:
     - hdfeos5
     - jasper
     - jpeg
+    - jq
     - libgdal
     - libiconv
     - libnetcdf

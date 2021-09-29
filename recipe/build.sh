@@ -1,6 +1,7 @@
 #!/bin/sh
 
-conda install --force-reinstall --freeze-installed --no-deps proj
+PROJ_VERSI=$(conda list --json proj |jq '.[0]|[.["name"], .["version"], .["build_string"]]|join("=")')
+conda install --force-reinstall --freeze-installed --no-deps -y $PROJ_VERSI
 
 export CXXFLAGS="-fPIC ${CXXFLAGS}"
 
