@@ -143,6 +143,7 @@ Feedstock Maintainers
 
 * [@akrherz](https://github.com/akrherz/)
 * [@david-ian-brown](https://github.com/david-ian-brown/)
+* [@erogluorhan](https://github.com/erogluorhan/)
 * [@khallock](https://github.com/khallock/)
 * [@marylhaley](https://github.com/marylhaley/)
 * [@ocefpaf](https://github.com/ocefpaf/)
