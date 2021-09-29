@@ -1,7 +1,8 @@
 #!/bin/sh
 
-echo "BUILD_PREFIX: $BUILD_PREFIX"
-echo ${BUILD_PREFIX}
+
+env
+
 conda list --json -p ${BUILD_PREFIX} proj
 PROJ_VERSI=$(conda list --json -p ${BUILD_PREFIX} proj |jq '.[0]|[.["name"], .["version"], .["build_string"]]|join("=")')
 echo "PROJ_VERSI: $PROJ_VERSI"
