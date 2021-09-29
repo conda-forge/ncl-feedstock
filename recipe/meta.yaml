@@ -11,7 +11,7 @@ source:
     - 0000-grib2.patch
     - 0001-extern-vars.patch
     - 0002-port-to-proj-6-api.patch
-    - jaspser2.patch
+    - jasper2.patch
 
 build:
   number: 31
