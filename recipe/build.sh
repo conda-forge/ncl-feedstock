@@ -1,7 +1,7 @@
 #!/bin/sh
 
-conda list --json proj
-PROJ_VERSI=$(conda list --json proj |jq '.[0]|[.["name"], .["version"], .["build_string"]]|join("=")')
+conda list --json -p $CONDA_PREFIX proj
+PROJ_VERSI=$(conda list --json -p $CONDA_PREFIX proj |jq '.[0]|[.["name"], .["version"], .["build_string"]]|join("=")')
 echo "PROJ_VERSI: $PROJ_VERSI"
 conda install --force-reinstall --freeze-installed --no-deps -y $PROJ_VERSI
 
