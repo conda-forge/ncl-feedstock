@@ -106,6 +106,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - erogluorhan
     - zklaus
     - khallock
     - marylhaley
