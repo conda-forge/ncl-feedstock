@@ -9,7 +9,7 @@ cairo:
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 curl:
@@ -74,7 +74,7 @@ pin_run_as_build:
 pixman:
 - '0'
 proj:
-- 8.1.0
+- 8.1.1
 target_platform:
 - linux-64
 zip_keys:
