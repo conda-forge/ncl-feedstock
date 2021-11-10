@@ -66,7 +66,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 proj:
-- 8.1.1
+- 8.2.0
 target_platform:
 - osx-64
 zip_keys:
