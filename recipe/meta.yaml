@@ -14,7 +14,7 @@ source:
     - jasper2.patch
 
 build:
-  number: 35
+  number: 36
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -28,7 +28,8 @@ requirements:
     - xorg-imake  # [linux]
     - xorg-makedepend
     - llvm-openmp  # [osx]
-    - libgomp      # [linux]
+    - libgomp  # [linux]
+    - make  # [unix]
   host:
     - libblas
     - libcblas

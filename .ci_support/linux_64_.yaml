@@ -19,7 +19,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
@@ -74,14 +74,12 @@ pin_run_as_build:
 pixman:
 - '0'
 proj:
-- 8.2.0
+- 8.2.1
 target_platform:
 - linux-64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
   - fortran_compiler_version
-- - cdt_name
-  - docker_image
 zlib:
 - '1.2'
