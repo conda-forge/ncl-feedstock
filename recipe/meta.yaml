@@ -28,7 +28,8 @@ requirements:
     - xorg-imake  # [linux]
     - xorg-makedepend
     - llvm-openmp  # [osx]
-    - libgomp      # [linux]
+    - libgomp  # [linux]
+    - make  # [unix]
   host:
     - libblas
     - libcblas
