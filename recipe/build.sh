@@ -6,10 +6,10 @@ export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
 export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
-    export CC="${CLANG}"
-    export CPP="clang-cpp -traditional"
-    export CXX="${CLANGXX}"
-    export FC
+    # export CC="${CLANG}"
+    # export CPP="clang-cpp -traditional"
+    # export CXX="${CLANGXX}"
+    # export FC
 
     export PATH="${PATH}:/opt/X11/bin"
 
@@ -31,10 +31,10 @@ if [ "$(uname)" = "Darwin" ]; then
     LDFLAGS="-headerpad_max_install_names ${LDFLAGS}"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
-    export CC="${GCC}"
-    export CPP="${CPP} -traditional"
-    export CXX="${GXX}"
-    export FC
+    # export CC="${GCC}"
+    # export CPP="${CPP} -traditional"
+    # export CXX="${GXX}"
+    # export FC
 
     conf_file=config/LINUX
 fi
