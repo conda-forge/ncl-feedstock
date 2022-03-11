@@ -21,14 +21,14 @@
 ${CAIROLIB}
 ${CAIROLIBUSER}
 
-#undefine CCompiler
-#undefine FCompiler
-#undefine CxxCompiler
-#undefine CppCommand
-#undefine LdCommand
-#undefine RanLib
-#undefine ArCommand
-#undefine ArSrcCommand
+#undef CCompiler
+#undef FCompiler
+#undef CxxCompiler
+#undef CppCommand
+#undef LdCommand
+#undef RanLib
+#undef ArCommand
+#undef ArSrcCommand
 
 #define CCompiler    "${CC}"
 #define FCompiler    "${FC}"
