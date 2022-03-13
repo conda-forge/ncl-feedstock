@@ -1,13 +1,13 @@
 #!/bin/sh
 
 export CXXFLAGS="-fPIC -DH5_USE_110_API ${CXXFLAGS}"
-export CPPFLAGS="-traditional -DH5_USE_110_API ${CPPFLAGS}"
+export CPPFLAGS="-DH5_USE_110_API ${CPPFLAGS}"
 export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
 export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
     # export CC="${CLANG}"
-    # export CPP="clang-cpp -traditional"
+    export CPP="clang-cpp -traditional"
     # export CXX="${CLANGXX}"
     # export FC
 
@@ -32,7 +32,7 @@ if [ "$(uname)" = "Darwin" ]; then
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
     # export CC="${GCC}"
-    # export CPP="${CPP} -traditional"
+    export CPP="${CPP} -traditional"
     # export CXX="${GXX}"
     # export FC
 
