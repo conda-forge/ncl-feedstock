@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export CXXFLAGS="-fPIC -DH5_USE_110_API ${CXXFLAGS}"
-export CPPFLAGS="-DH5_USE_110_API ${CPPFLAGS}"
+export CPPFLAGS="-traditional -DH5_USE_110_API ${CPPFLAGS}"
 export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
 export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
