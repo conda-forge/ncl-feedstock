@@ -34,7 +34,7 @@ elif [ "$(uname)" = "Linux" ]; then
     # export CC="${GCC}"
     export CPP="${CPP} -traditional"
     # export CXX="${GXX}"
-    # export FC
+    export FC="${FC} -std=legacy"
 
     conf_file=config/LINUX
 fi
