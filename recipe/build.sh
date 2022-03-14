@@ -3,7 +3,7 @@
 export CXXFLAGS="-fPIC -DH5_USE_110_API ${CXXFLAGS}"
 export CPPFLAGS="-DH5_USE_110_API ${CPPFLAGS}"
 export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
-export FFLAGS="-std=legacy -DH5_USE_110_API ${FFLAGS}"
+export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
     # export CC="${CLANG}"
@@ -34,7 +34,8 @@ elif [ "$(uname)" = "Linux" ]; then
     # export CC="${GCC}"
     export CPP="${CPP} -traditional"
     # export CXX="${GXX}"
-    export FC="${FC} -std=legacy"
+    # export FC="${FC} -std=legacy"
+    export EXTRA_FCOPTIONS="-std=legacy"
 
     conf_file=config/LINUX
 fi
