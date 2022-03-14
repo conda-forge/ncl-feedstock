@@ -35,7 +35,7 @@ elif [ "$(uname)" = "Linux" ]; then
     export CPP="${CPP} -traditional"
     # export CXX="${GXX}"
     # export FC="${FC} -std=legacy"
-    export EXTRA_FCOPTIONS="-std=legacy"
+    export EXTRA_FCOPTIONS="-fallow-argument-mismatch"
 
     conf_file=config/LINUX
 fi
