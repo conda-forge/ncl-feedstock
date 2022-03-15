@@ -45,6 +45,10 @@ export EXTRA_LDFLAGS="$LDFLAGS"
 export grib2_dir=${SRC_DIR}/external/g2clib-1.6.0
 export EXTRA_INCLUDES=-I${grib2_dir}
 
+find . -name 'triangle.c'
+
+exit 1
+
 # mkdir triangle_tmp && cd triangle_tmp && curl -q http://www.netlib.org/voronoi/triangle.shar | sh && mv triangle.? ../ni/src/lib/hlu/. && cd -
 
 # fix malformed sed subsitutions
