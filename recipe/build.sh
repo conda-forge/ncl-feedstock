@@ -45,6 +45,7 @@ export EXTRA_LDFLAGS="$LDFLAGS"
 export grib2_dir=${SRC_DIR}/external/g2clib-1.6.0
 export EXTRA_INCLUDES=-I${grib2_dir}
 
+pwd
 find . -name 'triangle.c'
 
 exit 1
