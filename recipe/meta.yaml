@@ -15,7 +15,7 @@ source:
       - jasper2.patch
   - url: https://netlib.sandia.gov/voronoi/triangle.zip
     sha256: 1766327add038495fa3499e9b7cc642179229750f7201b94f8e1b7bee76f8480
-    folder: ./ni/src/lib/hlu
+    folder: triangle_tmp
 
 build:
   number: 37
