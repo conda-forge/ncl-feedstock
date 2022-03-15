@@ -1,26 +1,47 @@
-From 3e2636996dfa92055e4026576bc78fb7bfdde98a Mon Sep 17 00:00:00 2001
+From eab7b1786614ec0e8ec7b7ff9f5bd192f8833d15 Mon Sep 17 00:00:00 2001
 From: Klaus Zimmermann <klaus.zimmermann@smhi.se>
 Date: Mon, 14 Mar 2022 19:13:46 +0100
 Subject: [PATCH] Replace BOZ with decimal constants
 
 ---
- ncarg2d/src/libncarg_gks/bwi/argb2ci.f | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
+ ncarg2d/src/libncarg_gks/bwi/argb2ci.f | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
 
 diff --git a/ncarg2d/src/libncarg_gks/bwi/argb2ci.f b/ncarg2d/src/libncarg_gks/bwi/argb2ci.f
-index 1fc394671..c4d1a3946 100644
+index 1fc394671..bf52b8941 100644
 --- a/ncarg2d/src/libncarg_gks/bwi/argb2ci.f
 +++ b/ncarg2d/src/libncarg_gks/bwi/argb2ci.f
-@@ -31,9 +31,9 @@ C     find the closest match, based upon distance in color space
+@@ -16,10 +16,16 @@ C
+       integer index, nearest
+       integer i
+       integer ARGBMASK, RMASK, GMASK, BMASK
+-      parameter (ARGBMASK = Z'40000000')
+-      parameter (RMASK     = Z'00FF0000')
+-      parameter (GMASK     = Z'0000FF00')
+-      parameter (BMASK     = Z'000000FF')
++C     The following constants correspond to certain bit patterns
++C     that are expressed naturally as hexadecimal numbers.
++C     However, to stay standards compliant, we replace the BOZ
++C     constants with their decimal equivalents.
++C     The constants are, in order:
++C     Z'40000000', Z'00FF0000', Z'0000FF00', Z'000000FF'.
++      parameter (ARGBMASK = 1073741824)
++      parameter (RMASK    = 16711680)
++      parameter (GMASK    = 65280)
++      parameter (BMASK    = 255)
+       real r, g, b, dist, mindist
+ 
+       if (iand(index, ARGBMASK).eq.0) then
+@@ -31,9 +37,9 @@ C     find the closest match, based upon distance in color space
        mindist = 2e31
        nearest = 0
        do i=1,mol
 -          r = (iand(index, RMASK) / Z'0000FFFF') / 255.
 -          g = (iand(index, GMASK) / Z'000000FF') / 255.
 -          b = (iand(index, BMASK))               / 255.
-+          r = (iand(index, RMASK) / 65535.) / 255.
-+          g = (iand(index, GMASK) / 255.)   / 255.
-+          b = (iand(index, BMASK))          / 255.
++          r = (iand(index, RMASK) / 65535) / 255.
++          g = (iand(index, GMASK) / 255)   / 255.
++          b = (iand(index, BMASK))         / 255.
  
  C         we don't need absolute distance, so forego the sqrt operation...
            dist = (r-sred(i))**2 + (g-sgreen(i))**2 + (b-sblue(i))**2
