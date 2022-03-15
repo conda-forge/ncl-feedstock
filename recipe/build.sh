@@ -47,6 +47,7 @@ export EXTRA_INCLUDES=-I${grib2_dir}
 
 pwd
 find . -name 'triangle.c'
+ls
 
 exit 1
 
