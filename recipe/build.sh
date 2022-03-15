@@ -46,7 +46,7 @@ export grib2_dir=${SRC_DIR}/external/g2clib-1.6.0
 export EXTRA_INCLUDES=-I${grib2_dir}
 
 # mkdir triangle_tmp && cd triangle_tmp && curl -q http://www.netlib.org/voronoi/triangle.shar | sh && mv triangle.? ../ni/src/lib/hlu/. && cd -
-cp triangle_tmp/triangle.? .ni/src/lib/hlu/
+cp triangle_tmp/triangle.? ni/src/lib/hlu/
 
 # fix malformed sed subsitutions
 sed -e 's/+/|/g' -i.backup ni/src/scripts/yMakefile
