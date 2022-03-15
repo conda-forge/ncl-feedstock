@@ -5,14 +5,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
-  sha256: cad4ee47fbb744269146e64298f9efa206bc03e7b86671e9729d8986bb4bc30e
-  patches:
-    - 0000-grib2.patch
-    - 0001-extern-vars.patch
-    - 0002-port-to-proj-6-api.patch
-    - 0003-boz-fix.patch
-    - jasper2.patch
+  - url: https://github.com/NCAR/ncl/archive/{{ version }}.tar.gz
+    sha256: cad4ee47fbb744269146e64298f9efa206bc03e7b86671e9729d8986bb4bc30e
+    patches:
+      - 0000-grib2.patch
+      - 0001-extern-vars.patch
+      - 0002-port-to-proj-6-api.patch
+      - 0003-boz-fix.patch
+      - jasper2.patch
+  - url: https://netlib.sandia.gov/voronoi/triangle.zip
+    sha256: 1766327add038495fa3499e9b7cc642179229750f7201b94f8e1b7bee76f8480
+    folder: ni/src/lib/hlu
 
 build:
   number: 37
