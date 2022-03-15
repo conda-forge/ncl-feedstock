@@ -6,10 +6,7 @@ export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
 export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
-    export CC="${CLANG}"
     export CPP="clang-cpp -traditional"
-    export CXX="${CLANGXX}"
-    export FC
 
     export PATH="${PATH}:/opt/X11/bin"
 
@@ -31,10 +28,8 @@ if [ "$(uname)" = "Darwin" ]; then
     LDFLAGS="-headerpad_max_install_names ${LDFLAGS}"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
-    export CC="${GCC}"
     export CPP="${CPP} -traditional"
-    export CXX="${GXX}"
-    export FC
+    export EXTRA_FCOPTIONS="-fallow-argument-mismatch"
 
     conf_file=config/LINUX
 fi
@@ -44,7 +39,7 @@ export EXTRA_LDFLAGS="$LDFLAGS"
 export grib2_dir=${SRC_DIR}/external/g2clib-1.6.0
 export EXTRA_INCLUDES=-I${grib2_dir}
 
-mkdir triangle_tmp && cd triangle_tmp && curl -q http://www.netlib.org/voronoi/triangle.shar | sh && mv triangle.? ../ni/src/lib/hlu/. && cd -
+cp triangle_tmp/triangle.? ni/src/lib/hlu/
 
 # fix malformed sed subsitutions
 sed -e 's/+/|/g' -i.backup ni/src/scripts/yMakefile
