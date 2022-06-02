@@ -37,11 +37,11 @@ jasper:
 jpeg:
 - '9'
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libgdal:
-- '3.4'
+- '3.5'
 libiconv:
 - '1.16'
 libnetcdf:
