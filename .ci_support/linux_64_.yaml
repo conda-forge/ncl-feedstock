@@ -37,11 +37,11 @@ jasper:
 jpeg:
 - '9'
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libgdal:
-- '3.4'
+- '3.5'
 libiconv:
 - '1.16'
 libnetcdf:
@@ -74,7 +74,7 @@ pin_run_as_build:
 pixman:
 - '0'
 proj:
-- 9.0.0
+- 9.0.1
 target_platform:
 - linux-64
 zip_keys:
