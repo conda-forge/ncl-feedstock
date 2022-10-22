@@ -5,7 +5,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,11 +15,11 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '13'
+- '14'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '9'
+- '11'
 gsl:
 - '2.7'
 hdf4:
@@ -37,36 +37,17 @@ libcblas:
 libgdal:
 - '3.5'
 libiconv:
-- '1.16'
+- '1'
 libnetcdf:
 - 4.8.1
 libpng:
 - '1.6'
 llvm_openmp:
-- '13'
+- '14'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-pin_run_as_build:
-  bzip2:
-    max_pin: x
-  curl:
-    max_pin: x
-  hdf4:
-    max_pin: x.x
-  jasper:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libgdal:
-    max_pin: x.x
-  libiconv:
-    max_pin: x.x
-  libpng:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 proj:
-- 9.0.1
+- 9.1.0
 target_platform:
 - osx-64
 zip_keys:
