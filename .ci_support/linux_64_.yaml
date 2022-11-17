@@ -5,7 +5,7 @@ c_compiler:
 c_compiler_version:
 - '10'
 cairo:
-- '1.16'
+- '1'
 cdt_name:
 - cos6
 channel_sources:
@@ -41,40 +41,17 @@ libblas:
 libcblas:
 - 3.9 *netlib
 libgdal:
-- '3.5'
+- '3.6'
 libiconv:
-- '1.16'
+- '1'
 libnetcdf:
 - 4.8.1
 libpng:
 - '1.6'
-pin_run_as_build:
-  bzip2:
-    max_pin: x
-  cairo:
-    max_pin: x.x
-  curl:
-    max_pin: x
-  freetype:
-    max_pin: x
-  hdf4:
-    max_pin: x.x
-  jasper:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libgdal:
-    max_pin: x.x
-  libiconv:
-    max_pin: x.x
-  libpng:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 pixman:
 - '0'
 proj:
-- 9.0.1
+- 9.1.0
 target_platform:
 - linux-64
 zip_keys:
