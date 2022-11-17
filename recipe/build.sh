@@ -7,6 +7,7 @@ export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
     export CPP="clang-cpp -traditional"
+    export EXTRA_FCOPTIONS="-fallow-argument-mismatch"
 
     export PATH="${PATH}:/opt/X11/bin"
 
