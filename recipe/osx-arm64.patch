@@ -1,0 +1,14 @@
+diff -ruN -x __pycache__ -x obj -x '*~' -x tags -x TAGS ncl-6.6.2.orig/config/Makefile.ini ncl-6.6.2/config/Makefile.ini
+--- ncl-6.6.2.orig/config/Makefile.ini	2019-02-28 00:44:39.000000000 +0100
++++ ncl-6.6.2/config/Makefile.ini	2023-02-28 15:50:18.350901456 +0100
+@@ -23,8 +23,8 @@
+ 
+ all: ymake-filter
+ 
+-ymake-filter: ymake-filter.o
+-	$(CC) $(CFLAGS) -o ymake-filter ymake-filter.o
++ymake-filter: ymake-filter.c
++	$(CC_FOR_BUILD) $(CFLAGS) -o ymake-filter ymake-filter.c
+ 
+ clean:
+ 	@-rm -f ymake-filter ymake-filter.o core
