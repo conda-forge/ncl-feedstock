@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+set -xe
 
 export CXXFLAGS="-fPIC -DH5_USE_110_API ${CXXFLAGS}"
 export CPPFLAGS="-DH5_USE_110_API ${CPPFLAGS}"
