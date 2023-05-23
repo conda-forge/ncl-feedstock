@@ -28,6 +28,7 @@ if [ "$(uname)" = "Darwin" ]; then
         exit
     fi
 
+    export CFLAGS="-Wno-error=int-conversion ${CFLAGS}"
     LDFLAGS="-headerpad_max_install_names ${LDFLAGS}"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
