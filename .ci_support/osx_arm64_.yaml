@@ -1,5 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '11.0'
 bzip2:
 - '1'
 c_compiler:
@@ -27,7 +27,7 @@ hdf4:
 hdf5:
 - 1.12.2
 jasper:
-- '4'
+- '2'
 jpeg:
 - '9'
 libblas:
@@ -45,11 +45,11 @@ libpng:
 llvm_openmp:
 - '15'
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 proj:
 - 9.2.0
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
