@@ -27,7 +27,7 @@ hdf4:
 hdf5:
 - 1.14.0
 jasper:
-- '2'
+- '4'
 jpeg:
 - '10'
 libblas:
