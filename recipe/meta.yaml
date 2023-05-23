@@ -50,7 +50,7 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
-    - jpeg
+    - libjpeg-turbo
     - libgdal
     - libiconv
     - libnetcdf
@@ -76,7 +76,7 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
-    - jpeg
+    - libjpeg-turbo
     - libgdal
     - libiconv
     - libnetcdf
