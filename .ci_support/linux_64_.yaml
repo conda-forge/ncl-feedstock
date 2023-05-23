@@ -41,7 +41,7 @@ libblas:
 libcblas:
 - 3.9 *netlib
 libgdal:
-- '3.6'
+- '3.7'
 libiconv:
 - '1'
 libnetcdf:
@@ -51,7 +51,7 @@ libpng:
 pixman:
 - '0'
 proj:
-- 9.1.1
+- 9.2.0
 target_platform:
 - linux-64
 zip_keys:
