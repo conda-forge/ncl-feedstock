@@ -29,7 +29,6 @@ if [ "$(uname)" = "Darwin" ]; then
     fi
 
     export EXTRA_CCOPTIONS="-Wno-error=int-conversion"
-    export CC="${CC} -Wno-error=int-conversion"
     LDFLAGS="-headerpad_max_install_names ${LDFLAGS}"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
