@@ -31,7 +31,7 @@ gsl:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.14.0
+- 1.12.2
 jasper:
 - '4'
 libblas:
@@ -45,13 +45,13 @@ libiconv:
 libjpeg_turbo:
 - 2.1.5
 libnetcdf:
-- 4.9.2
+- 4.9.1
 libpng:
 - '1.6'
 pixman:
 - '0'
 proj:
-- 9.1.1
+- 9.2.0
 target_platform:
 - linux-64
 zip_keys:
