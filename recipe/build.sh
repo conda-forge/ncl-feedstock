@@ -28,6 +28,7 @@ if [ "$(uname)" = "Darwin" ]; then
         exit
     fi
 
+    export EXTRA_CCOPTIONS="-Wno-error=int-conversion"
     LDFLAGS="-headerpad_max_install_names ${LDFLAGS}"
     conf_file=config/Darwin_Intel
 elif [ "$(uname)" = "Linux" ]; then
@@ -57,6 +58,11 @@ sed -e "s|\${PREFIX}|${PREFIX}|g" -e "s|\${x11_inc}|${x11_inc}|g" -e "s|\${x11_l
 
 echo -e "n\n" | ./Configure
 make Everything
+
+if [ ! -f "${PREFIX}/bin/ncl" ]; then
+    echo "Build did not produce ncl binary"
+    exit 1
+fi
 
 ACTIVATE_DIR="${PREFIX}/etc/conda/activate.d"
 DEACTIVATE_DIR="${PREFIX}/etc/conda/deactivate.d"

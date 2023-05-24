@@ -1,0 +1,12 @@
+diff -ruN -x __pycache__ -x obj -x '*~' -x tags -x TAGS -x autom4te.cache ncl-6.6.2.pre-int-conversion/ni/src/ncl/yMakefile ncl-6.6.2/ni/src/ncl/yMakefile
+--- ncl-6.6.2.pre-int-conversion/ni/src/ncl/yMakefile	2023-05-24 14:46:25.841016186 +0200
++++ ncl-6.6.2/ni/src/ncl/yMakefile	2023-05-24 14:46:37.561070432 +0200
+@@ -36,7 +36,7 @@
+ YACC		=	$(NYACC)
+ 
+ #if defined(Darwin)
+- EXTRA_CCOPTIONS = -std=c99
++ EXTRA_CCOPTIONS = -std=c99 -Wno-error=int-conversion
+ #EXTRA_CCOPTIONS = -framework OpenCL \
+ #		  -F/Applications/Qt/Desktop/Qt/474/gcc/lib \
+ #		  -framework QtOpenGL -framework QtGui -framework QtCore -framework OpenGL -framework AGL
