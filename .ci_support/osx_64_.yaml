@@ -5,27 +5,27 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 curl:
-- '7'
+- '8'
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '11'
+- '12'
 gsl:
 - '2.7'
 hdf4:
 - 4.2.15
 hdf5:
-- 1.12.2
+- 1.14.0
 jasper:
 - '2'
 jpeg:
@@ -39,11 +39,11 @@ libgdal:
 libiconv:
 - '1'
 libnetcdf:
-- 4.9.1
+- 4.9.2
 libpng:
 - '1.6'
 llvm_openmp:
-- '14'
+- '15'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 proj:
