@@ -14,7 +14,10 @@ source:
       - 0003-boz-fix.patch
       - jasper2.patch
       - osx-arm64.patch
+<<<<<<< HEAD
       - int-conversion.patch  # [osx]
+=======
+>>>>>>> c604f13 (Add patch for modern Jasper)
       - jasper-jpc.patch
   - url: https://netlib.sandia.gov/voronoi/triangle.zip
     sha256: 1766327add038495fa3499e9b7cc642179229750f7201b94f8e1b7bee76f8480
