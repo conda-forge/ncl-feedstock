@@ -25,7 +25,7 @@ gsl:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.12.2
+- 1.14.0
 jasper:
 - '4'
 libblas:
@@ -39,7 +39,7 @@ libiconv:
 libjpeg_turbo:
 - 2.1.5
 libnetcdf:
-- 4.9.1
+- 4.9.2
 libpng:
 - '1.6'
 llvm_openmp:
