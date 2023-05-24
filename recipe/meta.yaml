@@ -50,9 +50,9 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
-    - jpeg
     - libgdal
     - libiconv
+    - libjpeg-turbo
     - libnetcdf
     - libpng
     - pixman  # [linux]
@@ -76,9 +76,9 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
-    - jpeg
     - libgdal
     - libiconv
+    - libjpeg-turbo
     - libnetcdf
     - libpng
     - pixman  # [linux]
