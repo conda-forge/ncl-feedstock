@@ -25,21 +25,21 @@ gsl:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.12.2
+- 1.14.0
 jasper:
 - '4'
-jpeg:
-- '9'
 libblas:
 - 3.9 *netlib
 libcblas:
 - 3.9 *netlib
 libgdal:
-- '3.6'
+- '3.7'
 libiconv:
 - '1'
+libjpeg_turbo:
+- 2.1.5
 libnetcdf:
-- 4.9.1
+- 4.9.2
 libpng:
 - '1.6'
 llvm_openmp:
@@ -47,7 +47,7 @@ llvm_openmp:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 proj:
-- 9.1.1
+- 9.2.0
 target_platform:
 - osx-64
 zip_keys:
