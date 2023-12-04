@@ -43,7 +43,7 @@ libgdal:
 libiconv:
 - '1'
 libjpeg_turbo:
-- 2.1.5
+- '3'
 libnetcdf:
 - 4.9.2
 libpng:
