@@ -40,6 +40,7 @@ requirements:
   host:
     - libblas
     - libcblas
+    - postgresql 15
     - bzip2
     - cairo  # [linux]
     - curl
@@ -52,7 +53,6 @@ requirements:
     - jasper
     - libgdal
     - libiconv
-    - libjpeg-turbo
     - libnetcdf
     - libpng
     - pixman  # [linux]
@@ -78,7 +78,6 @@ requirements:
     - jasper
     - libgdal
     - libiconv
-    - libjpeg-turbo
     - libnetcdf
     - libpng
     - pixman  # [linux]
