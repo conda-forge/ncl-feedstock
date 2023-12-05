@@ -42,8 +42,6 @@ libgdal:
 - '3.7'
 libiconv:
 - '1'
-libjpeg_turbo:
-- 2.1.5
 libnetcdf:
 - 4.9.2
 libpng:
