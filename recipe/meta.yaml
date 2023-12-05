@@ -40,6 +40,7 @@ requirements:
   host:
     - libblas
     - libcblas
+    - postgresql 15
     - bzip2
     - cairo  # [linux]
     - curl
