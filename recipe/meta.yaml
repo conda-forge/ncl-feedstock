@@ -103,7 +103,7 @@ test:
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
-    - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash
+    - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && patch <${RECIPE_DIR}/comparison.patch && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash
 
 about:
   home: http://ncl.ucar.edu/
