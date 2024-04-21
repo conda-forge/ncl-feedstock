@@ -1,9 +1,9 @@
 diff -ruN ncl-6.6.2.orig/ni/src/nyacc/yMakefile ncl-6.6.2/ni/src/nyacc/yMakefile
 --- ncl-6.6.2.orig/ni/src/nyacc/yMakefile	2019-02-27 17:44:39.000000000 -0600
-+++ ncl-6.6.2/ni/src/nyacc/yMakefile	2024-04-21 13:50:00.807951916 -0600
++++ ncl-6.6.2/ni/src/nyacc/yMakefile	2024-04-21 14:13:02.179370458 -0600
 @@ -1,3 +1,7 @@
 +#if defined(Darwin)
-+ EXTRA_CCOPTIONS = -Wno-error=implicit-int
++ EXTRA_CCOPTIONS = -std=c89
 +#endif
 +
  MYBIN		= nyacc
