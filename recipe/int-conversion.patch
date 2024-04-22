@@ -6,7 +6,7 @@ diff -ruN -x __pycache__ -x obj -x '*~' -x tags -x TAGS -x autom4te.cache ncl-6.
  
  #if defined(Darwin)
 - EXTRA_CCOPTIONS = -std=c99
-+ EXTRA_CCOPTIONS = -std=c99 -Wno-error=int-conversion
++ EXTRA_CCOPTIONS = -std=c89
  #EXTRA_CCOPTIONS = -framework OpenCL \
  #		  -F/Applications/Qt/Desktop/Qt/474/gcc/lib \
  #		  -framework QtOpenGL -framework QtGui -framework QtCore -framework OpenGL -framework AGL
