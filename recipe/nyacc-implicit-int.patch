@@ -9,3 +9,17 @@ diff -ruN ncl-6.6.2.orig/ni/src/nyacc/yMakefile ncl-6.6.2/ni/src/nyacc/yMakefile
  MYBIN		= nyacc
  
  SRCS		= closure.c lalr.c main.c output.c skeleton.c verbose.c \
+diff -ruN ncl-6.6.2.orig/yMakefile ncl-6.6.2/yMakefile
+--- ncl-6.6.2.orig/yMakefile	2019-02-27 17:44:39.000000000 -0600
++++ ncl-6.6.2/yMakefile	2024-04-22 09:12:11.731692388 -0600
+@@ -29,6 +29,10 @@
+ SUBDIRS	= config common ncarg2d ngmath ncarview
+ #endif
+ 
++#if defined(Darwin)
++ EXTRA_CCOPTIONS = -std=c89
++#endif
++
+ #ifdef	YMAKEDEVFILE
+ Info::
+ 	@echo;\
