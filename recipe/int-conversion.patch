@@ -1,12 +1,28 @@
-diff -ruN -x __pycache__ -x obj -x '*~' -x tags -x TAGS -x autom4te.cache ncl-6.6.2.pre-int-conversion/ni/src/ncl/yMakefile ncl-6.6.2/ni/src/ncl/yMakefile
---- ncl-6.6.2.pre-int-conversion/ni/src/ncl/yMakefile	2023-05-24 14:46:25.841016186 +0200
-+++ ncl-6.6.2/ni/src/ncl/yMakefile	2023-05-24 14:46:37.561070432 +0200
-@@ -36,7 +36,7 @@
- YACC		=	$(NYACC)
+diff -ruN ncl-6.6.2.orig/ni/src/lib/nfp/yMakefile ncl-6.6.2/ni/src/lib/nfp/yMakefile
+--- ncl-6.6.2.orig/ni/src/lib/nfp/yMakefile	2019-02-27 17:44:39.000000000 -0600
++++ ncl-6.6.2/ni/src/lib/nfp/yMakefile	2024-04-22 17:13:37.185641466 -0600
+@@ -24,6 +24,10 @@
+ EXTRA_INCLUDES  = -I../../ncl
+ EXTRA_CDEFINES  = $(UDUNITS_DEFS) $(V5D_DEFS) $(GRIDSPEC_DEFS) $(ESMF_DEFS) $(KML_DEFS) $(EEMD_DEFS)
  
- #if defined(Darwin)
-- EXTRA_CCOPTIONS = -std=c99
-+ EXTRA_CCOPTIONS = -std=c89
- #EXTRA_CCOPTIONS = -framework OpenCL \
- #		  -F/Applications/Qt/Desktop/Qt/474/gcc/lib \
- #		  -framework QtOpenGL -framework QtGui -framework QtCore -framework OpenGL -framework AGL
++#if defined(Darwin)
++EXTRA_CCOPTIONS = -std=c99 -Wno-error=int-conversion
++#endif
++
+ HDRS = wrapper.h nctime.h
+ 
+ #ifdef BuildUdunits
+diff -ruN ncl-6.6.2.orig/yMakefile ncl-6.6.2/yMakefile
+--- ncl-6.6.2.orig/yMakefile	2019-02-27 17:44:39.000000000 -0600
++++ ncl-6.6.2/yMakefile	2024-04-22 17:15:31.037082500 -0600
+@@ -29,6 +29,10 @@
+ SUBDIRS	= config common ncarg2d ngmath ncarview
+ #endif
+ 
++#if defined(Darwin)
++ EXTRA_CCOPTIONS = -std=gnu89 -Wno-error=int-conversion
++#endif
++
+ #ifdef	YMAKEDEVFILE
+ Info::
+ 	@echo;\
