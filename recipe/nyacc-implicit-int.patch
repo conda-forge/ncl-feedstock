@@ -3,7 +3,7 @@ diff -ruN ncl-6.6.2.orig/ni/src/nyacc/yMakefile ncl-6.6.2/ni/src/nyacc/yMakefile
 +++ ncl-6.6.2/ni/src/nyacc/yMakefile	2024-04-21 14:13:02.179370458 -0600
 @@ -1,3 +1,7 @@
 +#if defined(Darwin)
-+ EXTRA_CCOPTIONS = -std=c89
++ EXTRA_CCOPTIONS = -std=gnu89
 +#endif
 +
  MYBIN		= nyacc
@@ -17,7 +17,7 @@ diff -ruN ncl-6.6.2.orig/yMakefile ncl-6.6.2/yMakefile
  #endif
  
 +#if defined(Darwin)
-+ EXTRA_CCOPTIONS = -std=c89 -Wno-error=int-conversion
++ EXTRA_CCOPTIONS = -std=gnu89 -Wno-error=int-conversion
 +#endif
 +
  #ifdef	YMAKEDEVFILE
