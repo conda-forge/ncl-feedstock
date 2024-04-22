@@ -17,7 +17,7 @@ diff -ruN ncl-6.6.2.orig/yMakefile ncl-6.6.2/yMakefile
  #endif
  
 +#if defined(Darwin)
-+ EXTRA_CCOPTIONS = -std=c89
++ EXTRA_CCOPTIONS = -std=c89 -Wno-error=int-conversion
 +#endif
 +
  #ifdef	YMAKEDEVFILE
