@@ -12,6 +12,23 @@ diff -ruN ncl-6.6.2.orig/ni/src/lib/nfp/yMakefile ncl-6.6.2/ni/src/lib/nfp/yMake
  HDRS = wrapper.h nctime.h
  
  #ifdef BuildUdunits
+diff -ruN ncl-6.6.2.orig/ni/src/ncl/yMakefile ncl-6.6.2/ni/src/ncl/yMakefile
+--- ncl-6.6.2.orig/ni/src/ncl/yMakefile	2019-02-27 17:44:39.000000000 -0600
++++ ncl-6.6.2/ni/src/ncl/yMakefile	2024-04-22 20:00:25.654253054 -0600
+@@ -35,13 +35,6 @@
+ MYLIB_API	=	libnclapi
+ YACC		=	$(NYACC)
+ 
+-#if defined(Darwin)
+- EXTRA_CCOPTIONS = -std=c99
+-#EXTRA_CCOPTIONS = -framework OpenCL \
+-#		  -F/Applications/Qt/Desktop/Qt/474/gcc/lib \
+-#		  -framework QtOpenGL -framework QtGui -framework QtCore -framework OpenGL -framework AGL
+-#endif
+-
+ #if defined(linux)
+  EXTRA_CCOPTIONS = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ #EXTRA_CCOPTIONS = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 diff -ruN ncl-6.6.2.orig/yMakefile ncl-6.6.2/yMakefile
 --- ncl-6.6.2.orig/yMakefile	2019-02-27 17:44:39.000000000 -0600
 +++ ncl-6.6.2/yMakefile	2024-04-22 18:41:01.365393888 -0600
