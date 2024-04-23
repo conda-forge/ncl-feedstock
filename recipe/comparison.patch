@@ -9,7 +9,7 @@
 +        METRIC=$(compare -metric DSSIM images/$png bad/$png null 2>&1);
  
 -        if [[ $compare_ret -eq 0 ]]; then
-+        if [[ (( $(echo "$METRIC < 10^-5" | sed 's/e-0/*10^-/' |bc -l) )) ]]; then
++        if [[ $(echo "$METRIC < 10^-5" | sed 's/e-0*/*10^-/' |bc -l) -eq 1 ]]; then
              dir_similar+=( $png )
          else
              dir_different+=( $png )

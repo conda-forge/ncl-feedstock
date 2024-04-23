@@ -2,34 +2,6 @@
 
 set -xe
 
-if [ "$(uname)" = "Darwin" ]; then
-  if [ $(echo '5.16047e-07 < 10^-5' | sed 's/e-0*/*10^-/' | bc -l) -eq 1 ]
-  then
-    echo "Good"
-  else
-    echo "Bad"
-  fi
-  if [ $(echo '5.16047e-07 < 10^-5' | sed 's/e-0/*10^-/' | bc -l) -eq 1 ]
-  then
-    echo "Good"
-  else
-    echo "Bad"
-  fi
-  if [ $(echo '5.16047e-03 < 10^-5' | sed 's/e-0*/*10^-/' | bc -l) -eq 1 ]
-  then
-    echo "Good"
-  else
-    echo "Bad"
-  fi
-  if [ $(echo '5.16047e-03 < 10^-5' | sed 's/e-0/*10^-/' | bc -l) -eq 1 ]
-  then
-    echo "Good"
-  else
-    echo "Bad"
-  fi
-  exit 1
-fi
-
 export CXXFLAGS="-fPIC -DH5_USE_110_API ${CXXFLAGS}"
 export CPPFLAGS="-DH5_USE_110_API ${CPPFLAGS}"
 export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
