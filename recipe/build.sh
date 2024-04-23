@@ -3,9 +3,8 @@
 set -xe
 
 if [ "$(uname)" = "Darwin" ]; then
-  echo '5.16047e-07 < 10^-5' | sed 's/e-0/*10^-/'
-  echo '5.16047e-07 < 10^-5' | sed 's/e-0/\*10^-/'
-  bc -v
+  echo '5.16047e-07 < 10^-5' | sed 's/e-0?/*10^-/' | bc -l
+  echo '5.16047e-07 < 10^-5' | sed 's/e-0/*10^-/' | bc -l
   exit 1
 fi
 
