@@ -3,8 +3,30 @@
 set -xe
 
 if [ "$(uname)" = "Darwin" ]; then
-  echo '5.16047e-07 < 10^-5' | sed 's/e-0?/*10^-/' | bc -l
-  echo '5.16047e-07 < 10^-5' | sed 's/e-0/*10^-/' | bc -l
+  if [ $(echo '5.16047e-07 < 10^-5' | sed 's/e-0*/*10^-/' | bc -l) -eq 1 ]
+  then
+    echo "Good"
+  else
+    echo "Bad"
+  fi
+  if [ $(echo '5.16047e-07 < 10^-5' | sed 's/e-0/*10^-/' | bc -l) -eq 1 ]
+  then
+    echo "Good"
+  else
+    echo "Bad"
+  fi
+  if [ $(echo '5.16047e-03 < 10^-5' | sed 's/e-0*/*10^-/' | bc -l) -eq 1 ]
+  then
+    echo "Good"
+  else
+    echo "Bad"
+  fi
+  if [ $(echo '5.16047e-03 < 10^-5' | sed 's/e-0/*10^-/' | bc -l) -eq 1 ]
+  then
+    echo "Good"
+  else
+    echo "Bad"
+  fi
   exit 1
 fi
 
