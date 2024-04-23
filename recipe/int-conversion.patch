@@ -14,13 +14,13 @@ diff -ruN ncl-6.6.2.orig/ni/src/lib/nfp/yMakefile ncl-6.6.2/ni/src/lib/nfp/yMake
  #ifdef BuildUdunits
 diff -ruN ncl-6.6.2.orig/yMakefile ncl-6.6.2/yMakefile
 --- ncl-6.6.2.orig/yMakefile	2019-02-27 17:44:39.000000000 -0600
-+++ ncl-6.6.2/yMakefile	2024-04-22 17:15:31.037082500 -0600
++++ ncl-6.6.2/yMakefile	2024-04-22 18:41:01.365393888 -0600
 @@ -29,6 +29,10 @@
  SUBDIRS	= config common ncarg2d ngmath ncarview
  #endif
  
 +#if defined(Darwin)
-+ EXTRA_CCOPTIONS = -std=gnu89 -Wno-error=int-conversion
++EXTRA_CCOPTIONS = -std=gnu89 -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=implicit-function-declaration
 +#endif
 +
  #ifdef	YMAKEDEVFILE
