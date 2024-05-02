@@ -86,7 +86,7 @@ requirements:
     - proj
     - udunits2
     - zlib
-    - esmf
+    - esmf <8.6.0
     - xorg-imake  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxaw  # [linux]
