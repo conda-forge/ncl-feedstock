@@ -21,7 +21,7 @@ source:
     folder: triangle_tmp
 
 build:
-  number: 51
+  number: 52
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -31,6 +31,7 @@ requirements:
     - pkg-config
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - xorg-imake  # [linux]
