@@ -33,7 +33,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - {{ stdlib('c') }}
     - xorg-imake  # [linux]
     - xorg-makedepend
     - llvm-openmp  # [osx]
