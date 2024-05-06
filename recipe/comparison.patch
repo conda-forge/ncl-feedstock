@@ -1,0 +1,15 @@
+--- run_tests.bash.orig	2024-04-19 15:12:27.759653424 -0600
++++ run_tests.bash	2024-04-19 15:15:27.142232150 -0600
+@@ -49,10 +49,9 @@
+         fi
+ 
+         mv $png bad/.
+-        compare -metric DSSIM images/$png bad/$png null 2>/dev/null
+-        compare_ret=$?
++        METRIC=$(compare -metric DSSIM images/$png bad/$png null 2>&1);
+ 
+-        if [[ $compare_ret -eq 0 ]]; then
++        if [[ $(echo "$METRIC < 10^-5" | sed 's/e-0*/*10^-/' |bc -l) -eq 1 ]]; then
+             dir_similar+=( $png )
+         else
+             dir_different+=( $png )

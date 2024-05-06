@@ -21,7 +21,7 @@ source:
     folder: triangle_tmp
 
 build:
-  number: 50
+  number: 51
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -32,6 +32,7 @@ requirements:
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - xorg-imake  # [linux]
     - xorg-makedepend
     - llvm-openmp  # [osx]
@@ -85,7 +86,7 @@ requirements:
     - proj
     - udunits2
     - zlib
-    - esmf
+    - esmf <8.6.0
     - xorg-imake  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxaw  # [linux]
@@ -100,10 +101,11 @@ test:
     - coreutils
     - git
     - imagemagick
+    - patch
   commands:
     - test "$(ncl -V)" = "{{ version }}"
     - NCARG_ROOT=${PREFIX} install/make-tarfile/check_files | grep -qv '^<'
-    - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash
+    - git clone https://github.com/NCAR/ncl_ci_test && cd ncl_ci_test && patch <${RECIPE_DIR}/comparison.patch && patch <${RECIPE_DIR}/verbose_tests.patch && export NCARG_ROOT=${PREFIX} && bash -x run_tests.bash
 
 about:
   home: http://ncl.ucar.edu/

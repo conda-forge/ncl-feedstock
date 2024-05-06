@@ -1,0 +1,11 @@
+--- run_tests.bash.orig	2024-05-02 15:02:01.205155570 +0200
++++ run_tests.bash	2024-05-02 15:03:09.967125407 +0200
+@@ -24,7 +24,7 @@
+         png=${s%%.ncl}.png
+ 
+         if [ -x "$(command -v "timeout")" ]; then
+-            timeout 1m ncl -Q $s >/dev/null
++            timeout 1m ncl -x $s >/dev/null
+             ncl_ret=$?
+             if [ $ncl_ret -eq 124 ] && [ -e "$png" ] || [ $ncl_ret -eq 0 ]; then
+                 ncl_ret=0
