@@ -21,7 +21,7 @@ source:
     folder: triangle_tmp
 
 build:
-  number: 54
+  number: 55
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -86,7 +86,7 @@ requirements:
     - proj
     - udunits2
     - zlib
-    - esmf <8.6.0
+    - esmf
     - xorg-imake  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxaw  # [linux]
