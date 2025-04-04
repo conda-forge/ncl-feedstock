@@ -21,7 +21,7 @@ source:
     folder: triangle_tmp
 
 build:
-  number: 54
+  number: 55
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -44,6 +44,7 @@ requirements:
     - bzip2
     - cairo  # [linux]
     - curl
+    - expat
     - freetype  # [linux]
     - gsl
     - hdf4
@@ -66,10 +67,12 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-libxt   # [linux]
+    - xorg-xorgproto  # [linux]
   run:
     - bzip2
     - cairo  # [linux]
     - curl
+    - expat
     - freetype  # [linux]
     - gsl
     - hdf4
@@ -98,9 +101,10 @@ test:
   source_files:
     - install/make-tarfile/check_files
   requires:
+    - bc
     - coreutils
     - git
-    - imagemagick
+    - imagemagick =7.1.1_19
     - patch
   commands:
     - test "$(ncl -V)" = "{{ version }}"
