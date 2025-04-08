@@ -14,6 +14,7 @@ source:
       - 0003-boz-fix.patch
       - jasper2.patch
       - osx-arm64.patch
+      - nfpfort-osx.patch
       - int-conversion.patch  # [osx]
       - jasper-jpc.patch
       - esmf-8-4-regrid.patch
@@ -23,7 +24,7 @@ source:
 
 build:
   number: 55
-  skip: True  # [not linux]
+  skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
 
