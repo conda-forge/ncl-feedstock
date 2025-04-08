@@ -1,0 +1,19 @@
+diff --git a/ni/src/examples/gsun/ESMF_regridding.ncl b/ni/src/examples/gsun/ESMF_regridding.ncl
+index 2db5e1e93..750e17c62 100644
+--- a/ni/src/examples/gsun/ESMF_regridding.ncl
++++ b/ni/src/examples/gsun/ESMF_regridding.ncl
+@@ -2897,12 +2897,12 @@ begin
+ 
+ ;---Checking if the user specifies that source grid is ESMF
+     if (isatt_logical_true(opt2,"SrcESMF")) then
+-        ESMFCMD = ESMFCMD + " --src_type ESMF"
++        ESMFCMD = ESMFCMD + " --src_type ESMFMESH"
+     end if
+ 
+ ;---Check if the user specifies that destination grid is ESMF
+     if (isatt_logical_true(opt2,"DstESMF")) then
+-      ESMFCMD = ESMFCMD + " --dst_type ESMF"
++      ESMFCMD = ESMFCMD + " --dst_type ESMFMESH"
+     end if
+ 
+ ;---This flag is necessary for V5.2.0r1 and grids like WRF.
