@@ -90,7 +90,7 @@ requirements:
     - proj
     - udunits2
     - zlib
-    - esmf * mpi_*
+    - esmf >=8 mpi_*
     - xorg-imake  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxaw  # [linux]
@@ -105,7 +105,7 @@ test:
     - bc
     - coreutils
     - git
-    - imagemagick =7.1.1_19
+    - imagemagick
     - patch
   commands:
     - test "$(ncl -V)" = "{{ version }}"
