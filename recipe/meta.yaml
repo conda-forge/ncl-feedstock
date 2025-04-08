@@ -105,7 +105,7 @@ test:
     - bc
     - coreutils
     - git
-    - imagemagick
+    - imagemagick !=7.1.1_47
     - patch
   commands:
     - test "$(ncl -V)" = "{{ version }}"
