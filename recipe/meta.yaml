@@ -23,7 +23,7 @@ source:
     folder: triangle_tmp
 
 build:
-  number: 55
+  number: 56
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
