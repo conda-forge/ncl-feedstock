@@ -14,14 +14,16 @@ source:
       - 0003-boz-fix.patch
       - jasper2.patch
       - osx-arm64.patch
+      - nfpfort-osx.patch
       - int-conversion.patch  # [osx]
       - jasper-jpc.patch
+      - esmf-8-4-regrid.patch
   - url: https://netlib.sandia.gov/voronoi/triangle.zip
     sha256: 1766327add038495fa3499e9b7cc642179229750f7201b94f8e1b7bee76f8480
     folder: triangle_tmp
 
 build:
-  number: 54
+  number: 55
   skip: True  # [win]
   features:
   detect_binary_files_with_prefix: true
@@ -44,6 +46,7 @@ requirements:
     - bzip2
     - cairo  # [linux]
     - curl
+    - expat
     - freetype  # [linux]
     - gsl
     - hdf4
@@ -66,10 +69,12 @@ requirements:
     - xorg-libxmu  # [linux]
     - xorg-libxrender  # [linux]
     - xorg-libxt   # [linux]
+    - xorg-xorgproto  # [linux]
   run:
     - bzip2
     - cairo  # [linux]
     - curl
+    - expat
     - freetype  # [linux]
     - gsl
     - hdf4
@@ -86,7 +91,7 @@ requirements:
     - proj
     - udunits2
     - zlib
-    - esmf <8.6.0
+    - esmf >=8 mpi_*
     - xorg-imake  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxaw  # [linux]
@@ -98,9 +103,10 @@ test:
   source_files:
     - install/make-tarfile/check_files
   requires:
+    - bc
     - coreutils
     - git
-    - imagemagick
+    - imagemagick !=7.1.1_47
     - patch
   commands:
     - test "$(ncl -V)" = "{{ version }}"
