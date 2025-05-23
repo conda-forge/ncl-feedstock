@@ -41,7 +41,7 @@ libblas:
 libcblas:
 - 3.9.* *netlib
 libgdal:
-- '3.10'
+- '3.11'
 libiconv:
 - '1'
 libjpeg_turbo:
