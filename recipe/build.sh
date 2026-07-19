@@ -4,7 +4,7 @@ set -xe
 
 export CXXFLAGS="-fPIC -DH5_USE_110_API ${CXXFLAGS}"
 export CPPFLAGS="-DH5_USE_110_API ${CPPFLAGS}"
-export CFLAGS="-DH5_USE_110_API ${CFLAGS}"
+export CFLAGS="-DH5_USE_110_API -D_POSIX_C_SOURCE=200112L ${CFLAGS}"
 export FFLAGS="-DH5_USE_110_API ${FFLAGS}"
 
 if [ "$(uname)" = "Darwin" ]; then
