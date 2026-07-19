@@ -7,7 +7,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '18'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -21,13 +21,13 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '18'
+- '19'
 expat:
 - '2'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '13'
+- '14'
 gsl:
 - '2.7'
 hdf4:
@@ -51,11 +51,11 @@ libnetcdf:
 libpng:
 - '1.6'
 llvm_openmp:
-- '18'
+- '19'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 proj:
-- '9.6'
+- '9.7'
 target_platform:
 - osx-64
 zip_keys:
